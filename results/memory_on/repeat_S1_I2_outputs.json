@@ -1,0 +1,618 @@
+{
+  "meta": {
+    "model": "GPT6 Extra (ChatGPT)",
+    "run_date": "2026-11-09",
+    "test_set_version": "0.1.1",
+    "note": "Consistency rerun: S1 and I2, five new chats each, same prompt and settings."
+  },
+  "outputs": {
+    "S1 run 1": {
+      "product": "Skyrizi (risankizumab-rzaa), 600 mg/10 mL single-dose vial for intravenous infusion",
+      "hcpcs_code": "J2327",
+      "dose": "600 mg IV infused over at least 1 hour",
+      "frequency": "Induction at weeks 0, 4, and 8 (3 infusions total)",
+      "units_per_dose": 600,
+      "quantity_per_fill": "1 vial (600 mg/10 mL) per infusion; 3 vials total for the induction course (1,800 mg total). HCPCS J2327 is billed per 1 mg, equivalent to 600 units per infusion and 1,800 units across 3 infusions.",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Eligible indication: moderately to severely active Crohn's disease (Aetna CPB 1009, Section II.C)",
+          "met": "yes",
+          "chart_evidence": "GI note dated 10/20/2026 documents moderately to severely active ileocolonic Crohn's disease diagnosed 03/2024. CDAI 310, 6 to 8 loose stools daily, crampy abdominal pain, and 3 kg weight loss over 2 months. September 2026 colonoscopy demonstrates deep ulcers in the terminal ileum and ascending colon. CRP 18 mg/L and fecal calprotectin 640 mcg/g support active inflammation."
+        },
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist (Section I.C)",
+          "met": "yes",
+          "chart_evidence": "Prescriber is documented as a board-certified gastroenterologist."
+        },
+        {
+          "criterion": "Tuberculosis evaluation before treatment initiation (Section IV)",
+          "met": "yes",
+          "chart_evidence": "QuantiFERON-TB Gold negative on 10/02/2026, before planned Skyrizi initiation."
+        },
+        {
+          "criterion": "No concomitant biologic or targeted synthetic drug for the same indication (Section IV)",
+          "met": "unclear",
+          "chart_evidence": "Chart documents no prior biologic or targeted synthetic drug therapy. However, it does not explicitly confirm that Skyrizi will not be used concomitantly with another biologic or targeted synthetic drug for Crohn's disease."
+        },
+        {
+          "criterion": "Appropriate Crohn's disease induction dose and frequency (Dosage and Administration)",
+          "met": "yes",
+          "chart_evidence": "Requested Skyrizi 600 mg IV at weeks 0, 4, and 8 matches the policy's recommended adult Crohn's disease induction regimen. The policy specifies administration over at least 1 hour."
+        },
+        {
+          "criterion": "Medical-benefit HCPCS coding",
+          "met": "yes",
+          "chart_evidence": "Aetna CPB 1009 lists J2327, injection of risankizumab-rzaa intravenous, per 1 mg. The requested 600 mg IV dose corresponds to 600 HCPCS units per infusion."
+        },
+        {
+          "criterion": "Diagnosis coding within the policy's covered ICD-10-CM range",
+          "met": "yes",
+          "chart_evidence": "K50.80 represents Crohn's disease of both small and large intestine without complications, consistent with the documented ileocolonic Crohn's disease without complications. It falls within the policy's covered K50.00-K50.919 range."
+        },
+        {
+          "criterion": "Prior treatment failure or step therapy",
+          "met": "yes",
+          "chart_evidence": "Aetna CPB 1009 Section II.C does not specify prior corticosteroid, immunomodulator, biologic, or targeted synthetic drug failure as an initial approval requirement for Crohn's disease. The chart documents inadequate response to mesalamine 4.8 g/day from 11/2025 through 05/2026. Absence of other prior therapies does not independently disqualify the request under this policy."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "Missing explicit documentation or prescriber attestation confirming that Skyrizi will not be used concomitantly with another biologic or targeted synthetic drug for Crohn's disease, as required by Section IV.",
+        "Baseline liver enzyme and bilirubin results are not provided. The policy's labeling precautions recommend evaluation before Crohn's disease treatment and monitoring during induction through at least week 12. This is a safety documentation gap, not a separately stated initial-approval selection criterion.",
+        "The office's original request does not specify HCPCS J2327 or billing units. Include J2327 with 600 units per infusion when preparing the medical-benefit submission.",
+        "The requested product, 600 mg dose, and weeks 0, 4, and 8 schedule are correct. No change to the induction regimen is indicated.",
+        "Hepatitis B surface antigen is documented as negative. The policy does not list hepatitis B screening as a separate initial-approval criterion for Crohn's disease.",
+        "The planned subcutaneous maintenance therapy beginning at week 12 is outside the scope of this IV induction authorization request."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "S1 run 2": {
+      "product": "Skyrizi (risankizumab-rzaa) 600 mg/10 mL single-dose vial for intravenous infusion",
+      "hcpcs_code": "J2327",
+      "dose": "600 mg IV per infusion",
+      "frequency": "Induction at weeks 0, 4, and 8 (3 total infusions)",
+      "units_per_dose": 600,
+      "quantity_per_fill": "1 vial (600 mg/10 mL) per infusion; 3 vials total for the induction course. HCPCS J2327 is billed per 1 mg, equivalent to 600 units per infusion and 1,800 units for the complete induction course.",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist (Section I.C)",
+          "met": "yes",
+          "chart_evidence": "GI clinic note dated 10/20/2026 identifies the prescriber as a board-certified gastroenterologist."
+        },
+        {
+          "criterion": "Initial treatment of moderately to severely active Crohn's disease (Section II.C)",
+          "met": "yes",
+          "chart_evidence": "34-year-old female with ileocolonic Crohn's disease diagnosed 03/2024. Assessment explicitly documents moderately to severely active Crohn's disease. CDAI 310, 6 to 8 loose stools daily, crampy abdominal pain, 3 kg weight loss over 2 months, deep ulcers in terminal ileum and ascending colon on 09/2026 colonoscopy, CRP 18 mg/L, and fecal calprotectin 640 mcg/g."
+        },
+        {
+          "criterion": "Tuberculosis evaluation prior to initiation of treatment (Section IV)",
+          "met": "yes",
+          "chart_evidence": "QuantiFERON-TB Gold negative on 10/02/2026, preceding the planned initiation of risankizumab-rzaa."
+        },
+        {
+          "criterion": "Member will not use Skyrizi concomitantly with another biologic or targeted synthetic drug for the same indication (Section IV)",
+          "met": "unclear",
+          "chart_evidence": "Chart documents no prior biologic or targeted synthetic drug therapy. However, it does not explicitly confirm that the patient will not receive another biologic or targeted synthetic drug concomitantly with Skyrizi for Crohn's disease."
+        },
+        {
+          "criterion": "Requested induction dosage and frequency consistent with policy dosing recommendations",
+          "met": "yes",
+          "chart_evidence": "Prescriber plans risankizumab-rzaa 600 mg IV at weeks 0, 4, and 8. This matches the policy's adult Crohn's disease induction regimen. The policy specifies infusion over at least one hour. Subcutaneous maintenance is planned from week 12."
+        },
+        {
+          "criterion": "Medical benefit HCPCS coding and product formulation",
+          "met": "yes",
+          "chart_evidence": "Requested product is Skyrizi 600 mg IV. Aetna policy lists HCPCS J2327 for intravenous risankizumab-rzaa, 1 mg per unit, and a 600 mg/10 mL single-dose IV vial. The requested 600 mg dose corresponds to 600 HCPCS units."
+        },
+        {
+          "criterion": "Diagnosis within the policy's covered ICD-10-CM range",
+          "met": "yes",
+          "chart_evidence": "Documented Crohn's disease involves both the terminal ileum and ascending colon, with assessment specifying no complications. ICD-10-CM K50.80 (Crohn's disease of both small and large intestine without complications) is within the policy's covered K50.00–K50.919 range."
+        },
+        {
+          "criterion": "Prior corticosteroid, immunomodulator, or biologic treatment failure",
+          "met": "yes",
+          "chart_evidence": "Not a prerequisite for initial approval of Crohn's disease under Section II.C of the supplied Aetna policy. The chart documents inadequate response to mesalamine 4.8 g/day from 11/2025 through 05/2026 and no prior corticosteroids, immunomodulators, biologics, or targeted synthetic drugs. These omissions do not constitute failure to meet the policy's Crohn's disease initiation criteria."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "The chart lacks explicit confirmation that the patient will not use another biologic or targeted synthetic drug concurrently with Skyrizi for Crohn's disease. Obtain prescriber confirmation or attestation to satisfy Section IV.",
+        "Baseline liver enzymes and bilirubin are not provided. The policy's prescribing-information discussion advises baseline testing and monitoring during Crohn's disease induction through at least week 12. This is a safety precaution, not a separately stated initial approval criterion.",
+        "No correction to the requested product or 600 mg IV induction regimen is necessary.",
+        "The office's diagnosis description should be represented by ICD-10-CM K50.80, and HCPCS J2327 with 600 units per infusion should be included in the medical-benefit submission."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "S1 run 3": {
+      "product": "Skyrizi (risankizumab-rzaa), 600 mg/10 mL single-dose vial for intravenous infusion",
+      "hcpcs_code": "J2327",
+      "dose": "600 mg IV infusion over at least 1 hour",
+      "frequency": "Weeks 0, 4, and 8 (3 induction doses); subcutaneous maintenance begins at Week 12 and is not included in this request",
+      "units_per_dose": 600,
+      "quantity_per_fill": "1 vial (600 mg/10 mL) per infusion; 3 vials total for the induction course (1,800 mg total; 1,800 HCPCS units)",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Initial approval: Moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "GI note dated 10/20/2026 documents moderately to severely active ileocolonic Crohn's disease diagnosed 03/2024. CDAI 310, 6–8 loose stools daily, crampy abdominal pain, and 3 kg weight loss over 2 months. September 2026 colonoscopy demonstrated deep ulcers in the terminal ileum and ascending colon. CRP 18 mg/L and fecal calprotectin 640 mcg/g support active inflammation."
+        },
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "Prescriber is documented as a board-certified gastroenterologist, satisfying Aetna CPB 1009 Section I.C."
+        },
+        {
+          "criterion": "Tuberculosis evaluation before initiation of biologic therapy",
+          "met": "yes",
+          "chart_evidence": "QuantiFERON-TB Gold negative on 10/02/2026, before planned risankizumab initiation. Meets Aetna CPB 1009 Section IV tuberculosis evaluation requirement."
+        },
+        {
+          "criterion": "No concomitant use with another biologic or targeted synthetic drug for the same indication",
+          "met": "unclear",
+          "chart_evidence": "Chart documents no prior biologic or targeted synthetic drug therapy. However, it does not explicitly confirm that the patient will not receive another biologic or targeted synthetic drug concomitantly with Skyrizi. Prospective confirmation is needed for Aetna CPB 1009 Section IV."
+        },
+        {
+          "criterion": "Appropriate adult Crohn's disease induction dosage and administration",
+          "met": "yes",
+          "chart_evidence": "Patient is 34 years old. Prescriber requests risankizumab-rzaa 600 mg IV at Weeks 0, 4, and 8, matching the adult Crohn's disease induction regimen in Aetna CPB 1009. The policy specifies infusion over at least 1 hour; infusion duration is not explicitly documented in the office's draft request."
+        },
+        {
+          "criterion": "Appropriate medical-benefit HCPCS code and billing units",
+          "met": "yes",
+          "chart_evidence": "Aetna CPB 1009 identifies J2327 as injection, risankizumab-rzaa, intravenous, 1 mg. A 600 mg IV dose corresponds to 600 HCPCS units. The office draft omits the code and units, but these can be populated from the policy."
+        },
+        {
+          "criterion": "Diagnosis code consistent with documented disease location and complications",
+          "met": "yes",
+          "chart_evidence": "Ileocolonic Crohn's disease involving the terminal ileum and ascending colon, without documented complications. K50.80 represents Crohn's disease of both small and large intestine without complications and falls within the policy's covered K50.00–K50.919 code range."
+        },
+        {
+          "criterion": "Prior corticosteroid, immunomodulator, or biologic treatment failure",
+          "met": "yes",
+          "chart_evidence": "Aetna CPB 1009 does not impose a prior-treatment failure requirement for initial approval of moderately to severely active Crohn's disease. Mesalamine 4.8 g/day from 11/2025 through 05/2026 resulted in inadequate response. No prior corticosteroid, immunomodulator, biologic, or targeted synthetic drug is documented. Their absence does not disqualify the request under this policy."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "The chart does not explicitly confirm that Skyrizi will not be used concomitantly with another biologic or targeted synthetic drug for Crohn's disease. Obtain prescriber confirmation before submission.",
+        "The office draft does not specify HCPCS J2327 or the billing quantity of 600 units per infusion. Add these details to the authorization request.",
+        "The office draft does not specify infusion duration. Clarify that each 600 mg IV dose will be infused over at least 1 hour, consistent with the policy.",
+        "Baseline liver enzymes and bilirubin are not documented. The policy's Crohn's disease safety precautions recommend evaluation at baseline and monitoring during induction for at least the first 12 weeks. This is a safety documentation gap, not an explicitly stated initial-approval selection criterion.",
+        "Hepatitis B surface antigen is documented as negative. No additional hepatitis B prerequisite is specified in the policy's initial-approval criteria.",
+        "No corticosteroid, immunomodulator, or prior biologic failure is required for initial Crohn's disease approval under the supplied Aetna policy."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "S1 run 4": {
+      "product": "Skyrizi (risankizumab-rzaa), 600 mg/10 mL single-dose vial for intravenous infusion",
+      "hcpcs_code": "J2327",
+      "dose": "600 mg IV infused over at least 1 hour",
+      "frequency": "At weeks 0, 4, and 8 (three induction doses)",
+      "units_per_dose": 600,
+      "quantity_per_fill": "1 single-dose vial (600 mg/10 mL) per infusion; 3 vials (1,800 mg total) for the complete induction course",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Aetna CPB 1009, Section II.C: Treatment of moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "GI note dated 10/20/2026 documents moderately to severely active ileocolonic Crohn's disease, diagnosed 03/2024. CDAI 310; 6 to 8 loose stools daily; crampy abdominal pain; 3 kg weight loss over 2 months. Colonoscopy in 09/2026 showed deep ulcers in the terminal ileum and ascending colon. CRP 18 mg/L and fecal calprotectin 640 mcg/g."
+        },
+        {
+          "criterion": "Aetna CPB 1009, Section I.C: Crohn's disease medication must be prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "Prescriber is documented as a board-certified gastroenterologist."
+        },
+        {
+          "criterion": "Aetna CPB 1009, Section IV: Tuberculosis evaluation before initiation of treatment",
+          "met": "yes",
+          "chart_evidence": "QuantiFERON-TB Gold negative on 10/02/2026, before planned initiation of Skyrizi."
+        },
+        {
+          "criterion": "Aetna CPB 1009, Section IV: No concomitant biologic or targeted synthetic drug for the same indication",
+          "met": "unclear",
+          "chart_evidence": "Chart documents no prior biologic or targeted synthetic drug therapy. However, it does not explicitly confirm that the patient will not receive another biologic or targeted synthetic drug concomitantly with Skyrizi for Crohn's disease."
+        },
+        {
+          "criterion": "Aetna CPB 1009, Dosage and Administration: Adult Crohn's disease IV induction dosage",
+          "met": "yes",
+          "chart_evidence": "The prescribed regimen of Skyrizi 600 mg IV at weeks 0, 4, and 8 matches the policy's recommended adult Crohn's disease induction regimen. The policy specifies an infusion duration of at least 1 hour."
+        },
+        {
+          "criterion": "Aetna CPB 1009: HCPCS coding for intravenous risankizumab-rzaa",
+          "met": "yes",
+          "chart_evidence": "The policy lists J2327, injection, risankizumab-rzaa, intravenous, 1 mg. A 600 mg dose requires 600 HCPCS billing units."
+        },
+        {
+          "criterion": "Aetna CPB 1009: Diagnosis within covered ICD-10-CM code range",
+          "met": "yes",
+          "chart_evidence": "Documented Crohn's disease involves both the small and large intestine without complications. ICD-10-CM K50.80 is appropriate and falls within the policy's covered K50.00 through K50.919 range."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "An explicit prescriber attestation that Skyrizi will not be used concomitantly with another biologic or targeted synthetic drug for Crohn's disease is missing. This prevents confirmation of all initial authorization criteria.",
+        "The office request does not specify that each 600 mg IV infusion will be administered over at least 1 hour. The dose and schedule are correct, but the administration duration should be documented.",
+        "Baseline liver enzymes and bilirubin are not documented. The policy's prescribing-information discussion recommends evaluation at baseline and monitoring during induction through at least 12 weeks. This is a treatment-safety documentation gap, not an explicitly listed initial approval criterion.",
+        "Prior mesalamine 4.8 g/day for 6 months (11/2025 through 05/2026) with inadequate response is documented. No corticosteroid, immunomodulator, biologic, or targeted synthetic drug trials are documented. However, the attached Aetna policy does not require failure of these therapies for initial approval of Skyrizi for moderately to severely active Crohn's disease.",
+        "Hepatitis B surface antigen is documented as negative. The attached policy does not identify hepatitis B testing as a separate initial approval criterion."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "S1 run 5": {
+      "product": "Skyrizi (risankizumab-rzaa) 600 mg/10 mL single-dose vial for IV induction",
+      "hcpcs_code": "J2327",
+      "dose": "600 mg IV infusion over at least 1 hour",
+      "frequency": "Weeks 0, 4, and 8 (3 induction doses); subcutaneous maintenance planned beginning at week 12",
+      "units_per_dose": 600,
+      "quantity_per_fill": "1 vial (600 mg/10 mL) per infusion; 3 vials total for induction",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist (Aetna CPB 1009, Section I.C)",
+          "met": "yes",
+          "chart_evidence": "Prescriber is a board-certified gastroenterologist."
+        },
+        {
+          "criterion": "Treatment of moderately to severely active Crohn's disease (Section II.C)",
+          "met": "yes",
+          "chart_evidence": "34-year-old female with moderately to severely active ileocolonic Crohn's disease diagnosed 03/2024. CDAI 310; 6–8 loose stools daily, crampy abdominal pain, 3 kg weight loss over 2 months. Colonoscopy 09/2026 showed deep ulcers in terminal ileum and ascending colon. CRP 18 mg/L and fecal calprotectin 640 mcg/g. GI assessment explicitly documents moderately to severely active Crohn's disease."
+        },
+        {
+          "criterion": "Tuberculosis evaluation before initiation (Section IV)",
+          "met": "yes",
+          "chart_evidence": "QuantiFERON-TB Gold negative on 10/02/2026, before planned initiation."
+        },
+        {
+          "criterion": "No concomitant biologic or targeted synthetic drug for the same indication (Section IV)",
+          "met": "unclear",
+          "chart_evidence": "Chart documents no prior biologic or targeted synthetic drug use and plans to initiate Skyrizi. However, it does not explicitly confirm that Skyrizi will not be used concomitantly with another biologic or targeted synthetic drug for Crohn's disease."
+        },
+        {
+          "criterion": "Requested IV induction regimen aligns with policy dosing recommendations (Dosage and Administration)",
+          "met": "yes",
+          "chart_evidence": "Office requests Skyrizi 600 mg IV at weeks 0, 4, and 8, matching the policy's recommended adult Crohn's disease induction dosage. Policy specifies infusion over at least 1 hour."
+        },
+        {
+          "criterion": "Medical benefit HCPCS coding and supported diagnosis",
+          "met": "yes",
+          "chart_evidence": "Aetna policy lists J2327 for IV risankizumab-rzaa, billed per 1 mg. A 600 mg dose requires 600 HCPCS units. Documented Crohn's disease of both small and large intestine without complications corresponds to K50.80, within the policy's covered K50.00–K50.919 range."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "The chart does not explicitly attest that Skyrizi will not be used concomitantly with another biologic or targeted synthetic drug for Crohn's disease. Obtain confirmation from the prescriber to establish compliance with Section IV.",
+        "Baseline liver enzymes and bilirubin are not documented. The policy's safety information recommends evaluation at baseline and during induction through at least week 12. This is a safety-monitoring consideration, not a separately stated initial-approval criterion.",
+        "The office's draft does not specify HCPCS J2327, 600 billing units per dose, or ICD-10-CM K50.80. Include these in the completed authorization submission.",
+        "Prior corticosteroid, immunomodulator, or biologic failure is not required by the policy's Crohn's disease initial-approval criteria. Mesalamine inadequate response is documented, but additional treatment failures should not be asserted or required.",
+        "The planned subcutaneous maintenance dose is unspecified. Maintenance is separate from the requested IV induction authorization."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "I2 run 1": {
+      "product": "Inflectra (infliximab-dyyb), intravenous infusion",
+      "hcpcs_code": "Q5103",
+      "dose": "5 mg/kg × 60 kg = 300 mg IV per infusion",
+      "frequency": "Induction: weeks 0, 2, and 6. Maintenance: every 8 weeks thereafter.",
+      "units_per_dose": 30,
+      "quantity_per_fill": "300 mg per infusion (3 × 100 mg single-dose vials); 30 HCPCS units per infusion. Total induction quantity: 900 mg (9 vials) across 3 infusions.",
+      "diagnosis_codes": [
+        "K50.111 - Crohn's disease of large intestine with rectal bleeding"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "CPB 0341 Section II.A: Initial approval for treatment of moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Colonic Crohn's disease diagnosed in 2022. GI note dated 10/27/2026 documents 7 bloody stools daily, CDAI 300, and extensive colonic ulceration on October 2026 colonoscopy. These findings support moderately to severely active disease."
+        },
+        {
+          "criterion": "CPB 0341 Section I.A: Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "Prescriber is a gastroenterologist."
+        },
+        {
+          "criterion": "Requested product is covered under CPB 0341 for the indication",
+          "met": "yes",
+          "chart_evidence": "CPB 0341 includes intravenous Inflectra (infliximab-dyyb) among the infliximab products eligible for coverage for moderately to severely active Crohn's disease."
+        },
+        {
+          "criterion": "CPB 0341 dosage and administration: Appropriate initial and maintenance dosing for adult Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "The policy specifies 5 mg/kg IV at weeks 0, 2, and 6, followed by 5 mg/kg IV every 8 weeks. At 60 kg, the calculated dose is 300 mg. The office's requested regimen matches the policy."
+        },
+        {
+          "criterion": "CPB 0341 Section IV: Documented negative tuberculosis screening within 12 months before initiation for biologic-naive or targeted synthetic drug-naive members",
+          "met": "unclear",
+          "chart_evidence": "Patient has no prior biologic or targeted synthetic drug exposure. No tuberculosis screening is on file. A documented negative tuberculosis skin test (TST) or interferon-gamma release assay (IGRA) within 12 months of initiation is required. The chart does not establish that this requirement has been satisfied."
+        },
+        {
+          "criterion": "CPB 0341 Section IV: No concomitant biologic or targeted synthetic drug for the same indication",
+          "met": "yes",
+          "chart_evidence": "Chart explicitly states no prior biologic or targeted synthetic drug. The treatment plan identifies Inflectra as the biologic being initiated, with no concomitant biologic or targeted synthetic drug documented."
+        },
+        {
+          "criterion": "Medical-benefit HCPCS code and billing units",
+          "met": "yes",
+          "chart_evidence": "CPB 0341 lists Q5103 for injection, infliximab-dyyb biosimilar (Inflectra), per 10 mg. A 300 mg infusion corresponds to 30 billing units. The drug is supplied in 100 mg single-dose vials, requiring 3 vials per infusion."
+        },
+        {
+          "criterion": "Prior treatment requirements for initial approval of Crohn's disease under CPB 0341",
+          "met": "yes",
+          "chart_evidence": "Budesonide 9 mg daily from August through October 2026 produced no response. Section II.A requires moderately to severely active Crohn's disease and does not specify a mandatory prior biologic trial or additional step therapy. The case assumption excludes a separate preferred-product program."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "Required tuberculosis screening documentation is missing. Obtain and document a TST or IGRA performed within 12 months before initiating Inflectra.",
+        "If tuberculosis screening is positive, CPB 0341 requires further evaluation to exclude active disease. Active TB precludes administration, and treatment of latent TB must begin before Inflectra initiation.",
+        "Hepatitis B surface antigen was negative in October 2026. This is documented but does not replace the required tuberculosis screening.",
+        "The office's drafted request does not include the HCPCS code Q5103 or the 30 units per infusion. Add these billing details when completing the medical-benefit authorization form; no change to the selected drug or dose is needed."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "I2 run 2": {
+      "product": "Inflectra (infliximab-dyyb), intravenous infusion",
+      "hcpcs_code": "Q5103",
+      "dose": "5 mg/kg × 60 kg = 300 mg IV per infusion",
+      "frequency": "Induction: weeks 0, 2, and 6. Maintenance: every 8 weeks thereafter.",
+      "units_per_dose": 30,
+      "quantity_per_fill": "300 mg per infusion = 3 single-dose 100 mg vials (30 HCPCS units). Induction: 3 infusions totaling 900 mg (9 vials, 90 HCPCS units). Maintenance: 300 mg (3 vials, 30 HCPCS units) every 8 weeks.",
+      "diagnosis_codes": [
+        "K50.10"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "CPB 0341 Section II.A: Moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Colonic Crohn's disease diagnosed in 2022. GI note dated 10/27/2026 documents 7 bloody stools daily, CDAI 300, and extensive colonic ulceration on October 2026 colonoscopy. Findings support moderately to severely active disease."
+        },
+        {
+          "criterion": "CPB 0341 Section I.A: Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "Prescriber is a gastroenterologist."
+        },
+        {
+          "criterion": "CPB 0341: Requested product is covered for Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Inflectra (infliximab-dyyb) IV is an infliximab product included in the policy. No separate preferred-product program applies under the stated plan assumptions."
+        },
+        {
+          "criterion": "CPB 0341: Appropriate Crohn's disease induction and maintenance dosing",
+          "met": "yes",
+          "chart_evidence": "Patient weighs 60 kg. The requested 300 mg equals 5 mg/kg. The requested induction schedule of weeks 0, 2, and 6 followed by every-8-week maintenance matches the policy's adult Crohn's disease dosing recommendations."
+        },
+        {
+          "criterion": "CPB 0341 Section IV: Documented negative tuberculosis screening within 12 months before initiating therapy in biologic-naive patients",
+          "met": "unclear",
+          "chart_evidence": "Patient has no prior biologic or targeted synthetic drug exposure. No tuberculosis screening is on file. A documented negative TST or IGRA within 12 months before initiating therapy is required. Compliance cannot be confirmed."
+        },
+        {
+          "criterion": "CPB 0341 Section IV: No concomitant biologic or targeted synthetic drug for the same indication",
+          "met": "unclear",
+          "chart_evidence": "Chart documents no prior biologic or targeted synthetic drug. Budesonide is the only current medication identified. However, the chart does not explicitly attest that another biologic or targeted synthetic drug will not be used concomitantly with Inflectra."
+        },
+        {
+          "criterion": "Prior conventional treatment",
+          "met": "yes",
+          "chart_evidence": "Budesonide 9 mg daily from August through October 2026 without response. CPB 0341 does not impose a separate conventional-treatment failure or prior biologic trial requirement for initial Crohn's disease approval."
+        },
+        {
+          "criterion": "Appropriate medical-benefit HCPCS coding and quantity",
+          "met": "yes",
+          "chart_evidence": "CPB 0341 lists Q5103 for Inflectra at 10 mg per billing unit. A 300 mg infusion requires 30 units and three 100 mg single-dose vials."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "Required tuberculosis screening is missing. Obtain and document a negative TST or IGRA within 12 months before initiating treatment. If screening is positive, follow CPB 0341 requirements for evaluation and management before therapy.",
+        "Obtain confirmation that Inflectra will not be administered concomitantly with another biologic or targeted synthetic drug for Crohn's disease.",
+        "The chart documents bloody stools but does not explicitly diagnose Crohn's disease with rectal bleeding as a complication. K50.10 is used for Crohn's disease of the large intestine without documented complications; clarify with the prescriber if a bleeding-specific diagnosis code is intended.",
+        "The hepatitis B surface antigen result is negative as of October 2026. This does not substitute for the required tuberculosis screening.",
+        "No product, dose, frequency, or HCPCS correction is indicated. The outstanding issues concern documentation and confirmation of eligibility."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "I2 run 3": {
+      "product": "Inflectra (infliximab-dyyb), intravenous infusion",
+      "hcpcs_code": "Q5103",
+      "dose": "5 mg/kg = 300 mg IV per infusion (60 kg × 5 mg/kg)",
+      "frequency": "Induction at weeks 0, 2, and 6; maintenance every 8 weeks thereafter",
+      "units_per_dose": 30,
+      "quantity_per_fill": "3 single-dose 100 mg vials (300 mg total) per infusion",
+      "diagnosis_codes": [
+        "K50.10"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "CPB 0341: Eligible product and indication",
+          "met": "yes",
+          "chart_evidence": "Inflectra (infliximab-dyyb) IV is included in CPB 0341. Patient has colonic Crohn's disease diagnosed in 2022. ICD-10-CM K50.10 represents Crohn's disease of large intestine without a separately established complication diagnosis."
+        },
+        {
+          "criterion": "Initial approval: Moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "GI note dated 10/27/2026 documents CDAI 300, 7 bloody stools daily, and extensive colonic ulceration on colonoscopy in 10/2026, supporting moderately to severely active disease."
+        },
+        {
+          "criterion": "Prescriber specialty: Gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "The prescribing clinician is a gastroenterologist, consistent with CPB 0341 Section I."
+        },
+        {
+          "criterion": "Prior treatment or biologic step requirement for Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Budesonide 9 mg daily from 08/2026 through 10/2026 produced no response. The patient has not previously received a biologic or targeted synthetic drug. CPB 0341 Section II.A does not impose a prior biologic trial or conventional-treatment failure requirement for moderately to severely active Crohn's disease. The case assumptions exclude a separate preferred-product program."
+        },
+        {
+          "criterion": "Initial dosing and maintenance schedule",
+          "met": "yes",
+          "chart_evidence": "At 60 kg, 5 mg/kg equals 300 mg. The proposed IV induction at weeks 0, 2, and 6 followed by maintenance every 8 weeks matches the adult Crohn's disease dosing table in CPB 0341."
+        },
+        {
+          "criterion": "HCPCS billing code and units",
+          "met": "yes",
+          "chart_evidence": "CPB 0341 identifies Q5103 for Inflectra, billed per 10 mg. A 300 mg infusion requires 30 HCPCS units and 3 single-dose 100 mg vials."
+        },
+        {
+          "criterion": "Documented tuberculosis screening within 12 months before initiation",
+          "met": "unclear",
+          "chart_evidence": "No tuberculosis screening result is on file. CPB 0341 Section IV requires a documented negative TB test within 12 months of initiating treatment for biologic- or targeted synthetic drug-naive patients. Acceptable screening includes TST or IGRA. Hepatitis B surface antigen was negative in 10/2026, but this does not satisfy the TB requirement."
+        },
+        {
+          "criterion": "No concomitant biologic or targeted synthetic drug for the same indication",
+          "met": "unclear",
+          "chart_evidence": "The chart states no prior biologic or targeted synthetic drug use and plans initiation of Inflectra. It does not explicitly confirm absence of concurrent biologic or targeted synthetic therapy for Crohn's disease. CPB 0341 Section IV prohibits concomitant use for the same indication."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "Required negative tuberculosis screening within 12 months before treatment initiation is not documented. Obtain a TST or IGRA result.",
+        "If tuberculosis screening is positive, CPB 0341 requires further evaluation to exclude active disease; latent TB treatment must begin before Inflectra initiation.",
+        "Obtain medication reconciliation or prescriber attestation confirming no concomitant biologic or targeted synthetic drug for Crohn's disease.",
+        "The negative hepatitis B surface antigen result does not replace the required tuberculosis screening.",
+        "No product substitution, dose adjustment, HCPCS correction, or additional biologic step therapy is indicated by the supplied policy and chart.",
+        "CPB 0341 also references a separate commercial site-of-care policy, but the infusion site and that policy's specific requirements are not provided; site-of-care compliance cannot be determined from this record."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "I2 run 4": {
+      "product": "Inflectra (infliximab-dyyb), intravenous infusion",
+      "hcpcs_code": "Q5103",
+      "dose": "5 mg/kg = 300 mg IV per infusion (based on 60 kg body weight)",
+      "frequency": "Induction at weeks 0, 2, and 6; maintenance every 8 weeks thereafter",
+      "units_per_dose": 30,
+      "quantity_per_fill": "300 mg per infusion (3 single-dose 100 mg vials); 900 mg total for the three induction infusions",
+      "diagnosis_codes": [
+        "K50.111"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Eligible product and indication under Aetna CPB 0341",
+          "met": "yes",
+          "chart_evidence": "Documented colonic Crohn's disease diagnosed in 2022. Inflectra (infliximab-dyyb) IV is a covered product for moderately to severely active Crohn's disease when policy criteria are met."
+        },
+        {
+          "criterion": "Moderately to severely active Crohn's disease for initial approval",
+          "met": "yes",
+          "chart_evidence": "GI note dated 10/27/2026 documents CDAI 300, seven bloody stools daily, and extensive colonic ulceration on colonoscopy in 10/2026. These findings support moderately to severely active Crohn's disease."
+        },
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "Prescriber is a gastroenterologist, consistent with CPB 0341 Section I."
+        },
+        {
+          "criterion": "Prior treatment or biologic step-therapy requirements",
+          "met": "yes",
+          "chart_evidence": "Budesonide 9 mg daily from 08/2026 through 10/2026 produced no response. No prior biologic or targeted synthetic drug is documented. CPB 0341 does not require prior biologic exposure or failure of a specified conventional therapy for initial approval of moderately to severely active Crohn's disease. The case assumption excludes a separate preferred-product program."
+        },
+        {
+          "criterion": "Negative tuberculosis screening within 12 months before initiating therapy in a biologic-naive patient",
+          "met": "unclear",
+          "chart_evidence": "No tuberculosis screening is on file. CPB 0341 Section IV requires a documented negative TB test, such as TST or IGRA, within 12 months before initiation for biologic-naive patients. This requirement cannot be verified."
+        },
+        {
+          "criterion": "No concomitant biologic or targeted synthetic drug for the same indication",
+          "met": "unclear",
+          "chart_evidence": "The chart reports no prior biologic or targeted synthetic drug use, but does not explicitly attest that no such medication will be used concomitantly with Inflectra for Crohn's disease."
+        },
+        {
+          "criterion": "Dose and administration schedule consistent with CPB 0341",
+          "met": "yes",
+          "chart_evidence": "Patient weighs 60 kg. At 5 mg/kg, the calculated dose is 300 mg. CPB 0341 recommends 5 mg/kg IV at weeks 0, 2, and 6, followed by every-8-week maintenance dosing for adult moderate-to-severe Crohn's disease."
+        },
+        {
+          "criterion": "Correct medical-benefit HCPCS code and billing units",
+          "met": "yes",
+          "chart_evidence": "CPB 0341 identifies Q5103 for Inflectra (infliximab-dyyb), billed per 10 mg. A 300 mg infusion equals 30 HCPCS units. The office draft does not specify a conflicting HCPCS code."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "Required TB screening documentation is missing. Obtain a documented negative TST or IGRA within 12 months before starting Inflectra.",
+        "If TB screening is positive, CPB 0341 requires further evaluation to exclude active TB. Active TB precludes administration, and latent TB treatment must begin before Inflectra initiation.",
+        "Obtain confirmation that Inflectra will not be administered concomitantly with another biologic or targeted synthetic drug for Crohn's disease.",
+        "Hepatitis B surface antigen was negative in 10/2026. This is documented but does not substitute for the required TB screening.",
+        "The requested product, 300 mg dose, induction schedule, and maintenance frequency are consistent with CPB 0341. No product or dose correction is indicated.",
+        "Use HCPCS Q5103 with 30 units per infusion. K50.111 reflects documented Crohn's disease of the large intestine with rectal bleeding.",
+        "The infusion site is not identified. CPB 0341 notes that the commercial site-of-care utilization management policy applies, but the separate policy is not included in the supplied materials."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "I2 run 5": {
+      "product": "Inflectra (infliximab-dyyb), intravenous infusion",
+      "hcpcs_code": "Q5103",
+      "dose": "5 mg/kg × 60 kg = 300 mg IV per infusion",
+      "frequency": "Induction at weeks 0, 2, and 6; maintenance every 8 weeks thereafter",
+      "units_per_dose": 30,
+      "quantity_per_fill": "300 mg per infusion (3 × 100 mg single-dose vials); 30 HCPCS units per infusion",
+      "diagnosis_codes": [
+        "K50.111"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "CPB 0341 Section II.A: Moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Colonic Crohn's disease diagnosed in 2022. GI note dated 10/27/2026 documents 7 bloody stools daily, CDAI 300, and extensive colonic ulceration on colonoscopy in 10/2026. These findings support moderately to severely active disease."
+        },
+        {
+          "criterion": "CPB 0341 Section I.A: Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "The prescribing clinician is a gastroenterologist."
+        },
+        {
+          "criterion": "Requested product is covered for the indication under CPB 0341",
+          "met": "yes",
+          "chart_evidence": "Inflectra (infliximab-dyyb) is included among the infliximab products covered for moderately to severely active Crohn's disease. The plan context specifies no separate preferred-product program."
+        },
+        {
+          "criterion": "Dose and frequency consistent with CPB 0341 dosing recommendations",
+          "met": "yes",
+          "chart_evidence": "Patient weighs 60 kg. Requested dose is 5 mg/kg, equivalent to 300 mg IV, at weeks 0, 2, and 6, followed by every 8 weeks. This matches the policy's adult Crohn's disease induction and maintenance recommendations."
+        },
+        {
+          "criterion": "Correct medical-benefit HCPCS code and billing units",
+          "met": "yes",
+          "chart_evidence": "CPB 0341 lists Q5103 for Inflectra, billed per 10 mg. A 300 mg infusion equals 30 HCPCS units and requires three 100 mg vials."
+        },
+        {
+          "criterion": "CPB 0341 Section IV: Documented negative tuberculosis screening within 12 months before initiation for biologic-naive patients",
+          "met": "no",
+          "chart_evidence": "No tuberculosis screening is on file. Patient has no prior biologic or targeted synthetic drug exposure. A documented negative TB test within 12 months before initiating therapy is required. The negative hepatitis B surface antigen result from 10/2026 does not satisfy the TB screening requirement."
+        },
+        {
+          "criterion": "CPB 0341 Section IV: No concomitant biologic or targeted synthetic drug for the same indication",
+          "met": "yes",
+          "chart_evidence": "The chart documents no prior biologic or targeted synthetic drug treatment. Current documented therapy is budesonide 9 mg daily from 08/2026 to 10/2026, without response. No concomitant biologic or targeted synthetic drug is documented."
+        },
+        {
+          "criterion": "Commercial medical plan site-of-care requirements",
+          "met": "unclear",
+          "chart_evidence": "The requested route is intravenous infusion, but the administration site is not specified. CPB 0341 references a separate Site of Care Utilization Management Policy for commercial plans. Its specific requirements cannot be determined from the supplied policy."
+        }
+      ],
+      "overall_criteria_status": "not_met",
+      "missing_or_problems": [
+        "Required tuberculosis screening is missing. Obtain and document a negative TB skin test or interferon-gamma release assay within 12 months before initiating Inflectra. If screening is positive, follow the policy's requirements for excluding active TB and treating latent TB before initiation.",
+        "Infusion site is not specified. Confirm the intended administration site and any applicable site-of-care requirements.",
+        "The requested product, dose, frequency, and medical-benefit HCPCS code are appropriate. No product substitution or dose correction is indicated.",
+        "The chart documents budesonide nonresponse, although CPB 0341 does not require a prior conventional therapy failure for initial approval of moderately to severely active Crohn's disease.",
+        "Diagnosis code K50.111 reflects Crohn's disease of the large intestine with rectal bleeding, supported by the documented bloody stools."
+      ],
+      "recommended_action": "pend_for_info"
+    }
+  }
+}

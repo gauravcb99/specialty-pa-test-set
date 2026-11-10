@@ -1,0 +1,363 @@
+{
+  "meta": {
+    "name": "Specialty PA test set",
+    "version": "0.1 draft",
+    "built": "2026-11-06",
+    "note": "All patients and charts are synthetic. Criteria come from public payer policies (links and versions below). Policy text is not reproduced here; the model receives the policy document itself.",
+    "case_types": {
+      "clean": "Meets criteria. Tests for false alarms.",
+      "gap": "Something the policy requires is missing or doesn't count.",
+      "drug_layer_trap": "Dose, units, product or timing is wrong in the request as drafted."
+    },
+    "severity_levels": {
+      "decision_changing": "Would produce a wrong approval or a denial.",
+      "delay": "Would trigger a pend or a request for more information.",
+      "cosmetic": "Formatting or a non-required field.",
+      "false_alarm": "Flags a problem that isn't there. Costs reviewer time."
+    },
+    "actions": {
+      "submit": "Criteria met and request is correct as written.",
+      "pend_for_info": "Get missing documentation or attestation from the prescriber before submitting.",
+      "fix_request": "Change product, code or dose before submitting."
+    }
+  },
+  "policies": {
+    "AETNA_1009": {
+      "payer": "Aetna",
+      "title": "CPB 1009 Risankizumab-rzaa (Skyrizi)",
+      "version": "Last review 10/14/2026",
+      "url": "https://www.aetna.com/cpb/medical/data/1000_1099/1009.html"
+    },
+    "UHC_2026D0116H": {
+      "payer": "UnitedHealthcare (commercial)",
+      "title": "Skyrizi (risankizumab-rzaa), Commercial and Individual Exchange Medical Benefit Drug Policy 2026D0116H",
+      "version": "Effective 08/01/2026",
+      "url": "https://www.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/skyrizi.pdf"
+    },
+    "CIGNA_IP0670": {
+      "payer": "Cigna",
+      "title": "IP0670 Inflammatory Conditions: Skyrizi Subcutaneous Prior Authorization Policy",
+      "version": "Effective 08/01/2026",
+      "url": "https://a.static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0670_coveragepositioncriteria_inflammatory_conditions_skyrizi_subcutaneous_pa.pdf"
+    },
+    "UHC_2026D0004AR": {
+      "payer": "UnitedHealthcare (commercial)",
+      "title": "Infliximab (Avsola, Inflectra, Remicade, Renflexis), Medical Benefit Drug Policy 2026D0004AR",
+      "version": "Effective 02/01/2026",
+      "url": "https://green-gateway.uhcprovider.com/content/dam/provider/docs/public/policies/comm-medical-drug/infliximab-remicade-inflectra.pdf"
+    },
+    "AETNA_0341": {
+      "payer": "Aetna",
+      "title": "CPB 0341 Infliximab",
+      "version": "Last review 10/05/2026",
+      "url": "https://www.aetna.com/cpb/medical/data/300_399/0341.html"
+    },
+    "CIGNA_IP0816": {
+      "payer": "Cigna",
+      "title": "IP0816 Weight Loss: GLP-1 Agonists, Zepbound",
+      "version": "Effective 09/01/2026",
+      "url": "https://static.cigna.com/assets/chcp/pdf/coveragePolicies/pharmacy/ip_0816_coveragepositioncriteria_weight_loss_zepbound.pdf"
+    },
+    "AETNA_6947C": {
+      "payer": "Aetna (non-Medicare pharmacy)",
+      "title": "Zepbound PA with Limit FE Compatible 6947-C",
+      "version": "P04-2025, dated 07/01/2025 (latest public version found)",
+      "url": "https://www.aetna.com/products/rxnonmedicare/data/2025/Zepbound_PA_with_Limit_FE_Compatible_6947-C_P04-2025.html"
+    }
+  },
+  "cases": [
+    {
+      "id": "S1",
+      "drug": "Skyrizi (risankizumab-rzaa) IV",
+      "policy": "AETNA_1009",
+      "case_type": "clean",
+      "patient": "SK (same chart as S2)",
+      "case_note": "Commercial Aetna plan. Medical benefit, IV induction.",
+      "chart": "GI clinic note, 10/20/2026. Synthetic patient SK, 34-year-old female. Ileocolonic Crohn's disease diagnosed 03/2024. Current: 6 to 8 loose stools per day, crampy abdominal pain, 3 kg weight loss over 2 months. CDAI 310. Colonoscopy 09/2026: deep ulcers in terminal ileum and ascending colon. CRP 18 mg/L; fecal calprotectin 640 mcg/g. Weight 64 kg. Prior therapy: mesalamine 4.8 g/day for 6 months (11/2025 to 05/2026), inadequate response. No corticosteroids, no immunomodulators, no prior biologic or targeted synthetic drug. QuantiFERON-TB Gold negative 10/02/2026. Hepatitis B surface antigen negative. Assessment: moderately to severely active ileocolonic Crohn's disease without complications. Plan: start risankizumab-rzaa 600 mg IV at weeks 0, 4 and 8, then subcutaneous maintenance from week 12. Prescriber: board-certified gastroenterologist.",
+      "request_as_drafted": "Skyrizi 600 mg IV at weeks 0, 4, 8. Dx: Crohn's disease of small and large intestine.",
+      "answer_key": {
+        "product": "Skyrizi (risankizumab-rzaa) IV 600 mg",
+        "hcpcs_code": "J2327",
+        "dose": "600 mg",
+        "frequency": "weeks 0, 4 and 8 (3 doses)",
+        "units_per_dose": 600,
+        "dx_accepted": [
+          "K50.80"
+        ],
+        "criteria_status": "met",
+        "missing_or_problems": [],
+        "action": "submit",
+        "hcpcs_accepted": [
+          "J2327"
+        ],
+        "benefit": "medical"
+      },
+      "trap": "Aetna has no prior-therapy requirement for Crohn's. A model that asks for a failed conventional therapy is raising a false alarm.",
+      "severity_if_missed": "false_alarm",
+      "rationale": "CPB 1009 Crohn's criteria: moderately to severely active CD; prescribed by or with a gastroenterologist. 'Other' section: TB evaluation before initiation; no concurrent biologic or targeted synthetic for the same indication. All documented. Dosing per label. J2327 = 1 mg per unit."
+    },
+    {
+      "id": "S2",
+      "drug": "Skyrizi (risankizumab-rzaa) IV",
+      "policy": "UHC_2026D0116H",
+      "case_type": "gap",
+      "patient": "SK (same chart as S1)",
+      "case_note": "Commercial UnitedHealthcare plan that applies the policy's medical necessity criteria.",
+      "chart": "Identical to S1.",
+      "request_as_drafted": "Skyrizi 600 mg IV at weeks 0, 4, 8. Dx: Crohn's disease of small and large intestine. Prior therapy: failed mesalamine.",
+      "answer_key": {
+        "product": "Skyrizi (risankizumab-rzaa) IV 600 mg",
+        "hcpcs_code": "J2327",
+        "dose": "600 mg",
+        "frequency": "weeks 0, 4 and 8 (3 doses)",
+        "units_per_dose": 600,
+        "dx_accepted": [
+          "K50.80"
+        ],
+        "criteria_status": "not_met",
+        "missing_or_problems": [
+          "No failure of a listed conventional therapy (corticosteroid, 6-mercaptopurine, azathioprine or methotrexate) and no prior systemic targeted immunomodulator. Mesalamine is not on the policy's list."
+        ],
+        "action": "pend_for_info",
+        "hcpcs_accepted": [
+          "J2327"
+        ],
+        "benefit": "medical"
+      },
+      "trap": "The request says 'failed mesalamine,' which looks like it satisfies a prior-therapy rule. UHC's list doesn't include mesalamine.",
+      "severity_if_missed": "decision_changing",
+      "rationale": "2026D0116H medically necessary criteria, Crohn's IV: failure of a conventional therapy at up to maximally indicated doses (corticosteroids such as prednisone, methylprednisolone, budesonide; 6-MP; azathioprine; methotrexate) unless contraindicated, OR prior FDA-approved systemic targeted immunomodulator for CD. Also GI prescriber, labeled induction dosing, 3 induction doses authorized. Ask the prescriber for any steroid or immunomodulator history or a documented contraindication."
+    },
+    {
+      "id": "S3",
+      "drug": "Skyrizi (risankizumab-rzaa) SC on-body injector",
+      "policy": "CIGNA_IP0670",
+      "case_type": "drug_layer_trap",
+      "patient": "SK profile, different history",
+      "case_note": "Commercial Cigna plan, pharmacy benefit. Same patient profile as S1, but in this version she was on Skyrizi before.",
+      "chart": "GI clinic note, 10/22/2026. Synthetic patient SK, 34-year-old female. Ileocolonic Crohn's disease diagnosed 03/2024. Treatment history: risankizumab-rzaa 600 mg IV induction 01/2025 to 03/2025, then 360 mg SC every 8 weeks 04/2025 to 02/2026, with clinical remission (CDAI under 150). Stopped 02/2026 when insurance coverage lapsed. Enrolled in Cigna plan 09/2026. Symptoms returned: 5 loose stools per day, abdominal pain, CDAI 280, CRP 12 mg/L. Plan: 'Restart Skyrizi 360 mg SC every 8 weeks via on-body injector.' No plan for IV induction documented. Prescriber: gastroenterologist.",
+      "request_as_drafted": "Continuation of therapy: Skyrizi 360 mg SC every 8 weeks. Patient previously achieved remission on Skyrizi.",
+      "answer_key": {
+        "product": "Skyrizi (risankizumab-rzaa) 360 mg/2.4 mL prefilled cartridge with on-body injector",
+        "hcpcs_code": "N/A (pharmacy benefit)",
+        "dose": "360 mg",
+        "frequency": "every 8 weeks",
+        "units_per_dose": null,
+        "dx_accepted": [
+          "K50.80"
+        ],
+        "criteria_status": "not_met",
+        "missing_or_problems": [
+          "Patient is restarting therapy, so initial criteria apply, not continuation.",
+          "Initial criteria need a prescriber attestation that the patient will receive Skyrizi IV induction within 3 months of starting Skyrizi SC. Not documented."
+        ],
+        "action": "pend_for_info",
+        "hcpcs_accepted": [],
+        "benefit": "pharmacy"
+      },
+      "trap": "The office drafted it as a continuation because the patient responded before. Cigna reviews restarting patients under initial criteria.",
+      "severity_if_missed": "decision_changing",
+      "rationale": "IP0670 p. 3: Crohn's initial approval (6 months) requires age over 18, prescriber attestation that the patient will receive Skyrizi IV induction within 3 months of initiating Skyrizi SC, and GI prescriber. Continuation requires being established on therapy for at least 6 months plus response; a patient restarting therapy is reviewed under initial criteria."
+    },
+    {
+      "id": "I1",
+      "drug": "Infliximab-dyyb (Inflectra) IV",
+      "policy": "UHC_2026D0004AR",
+      "case_type": "clean",
+      "patient": "IF (same chart as I3)",
+      "case_note": "Commercial UnitedHealthcare plan, medical benefit.",
+      "chart": "GI clinic note, 10/15/2026. Synthetic patient IF, 29-year-old male. Ileal Crohn's disease diagnosed 06/2023. Weight 80 kg. Prednisone 40 mg taper over 8 weeks (03/2025 to 05/2025) with flare at the end of the taper. Azathioprine 200 mg daily (2.5 mg/kg; TPMT activity normal) since 01/2026. Despite 9 months of azathioprine: 6 stools per day, abdominal pain, CDAI 290, CRP 22 mg/L; MR enterography 09/2026 shows 25 cm of active terminal ileal inflammation without stricture or fistula. No prior biologic or targeted synthetic drug. QuantiFERON-TB Gold negative 10/01/2026. Assessment: moderately to severely active ileal Crohn's disease without complications, failed corticosteroids and azathioprine. Plan: start infliximab-dyyb (Inflectra) 5 mg/kg = 400 mg IV at weeks 0, 2 and 6, then every 8 weeks. Continue azathioprine. Prescriber: gastroenterologist.",
+      "request_as_drafted": "Inflectra 400 mg IV at weeks 0, 2, 6, then every 8 weeks. Dx: Crohn's disease of small intestine.",
+      "answer_key": {
+        "product": "Inflectra (infliximab-dyyb)",
+        "hcpcs_code": "Q5103",
+        "dose": "400 mg (5 mg/kg x 80 kg)",
+        "frequency": "weeks 0, 2 and 6, then every 8 weeks",
+        "units_per_dose": 40,
+        "dx_accepted": [
+          "K50.00"
+        ],
+        "criteria_status": "met",
+        "missing_or_problems": [],
+        "action": "submit",
+        "hcpcs_accepted": [
+          "Q5103"
+        ],
+        "benefit": "medical"
+      },
+      "trap": "Two false-alarm chances: flagging azathioprine as a disallowed combination (the policy bars combining with a targeted immunomodulator, not with azathioprine), or miscounting units.",
+      "severity_if_missed": "false_alarm",
+      "rationale": "2026D0004AR: Inflectra and Avsola are preferred. Crohn's initial: moderately to severely active CD; failure of one conventional therapy (corticosteroids, 6-MP, azathioprine, methotrexate) or high-risk disease or prior targeted immunomodulator; FDA-labeled dosing; not combined with a systemic targeted immunomodulator; GI prescriber; initial authorization up to 12 months. Q5103 = 10 mg per unit, so 400 mg = 40 units (exactly four 100 mg vials)."
+    },
+    {
+      "id": "I2",
+      "drug": "Infliximab-dyyb (Inflectra) IV",
+      "policy": "AETNA_0341",
+      "case_type": "gap",
+      "patient": "IF2",
+      "case_note": "Commercial Aetna plan, medical benefit. For this case, assume the plan applies CPB 0341 with no separate preferred-product program.",
+      "chart": "GI clinic note, 10/27/2026. Synthetic patient IF2, 45-year-old female. Colonic Crohn's disease diagnosed 2022. Weight 60 kg. Current: 7 bloody stools per day, CDAI 300, colonoscopy 10/2026 with extensive colonic ulceration. Budesonide 9 mg daily 08/2026 to 10/2026 without response. No prior biologic or targeted synthetic drug. Hepatitis B surface antigen negative 10/2026. No tuberculosis screening on file. Plan: start infliximab-dyyb (Inflectra) 5 mg/kg = 300 mg IV at weeks 0, 2 and 6, then every 8 weeks. Prescriber: gastroenterologist.",
+      "request_as_drafted": "Inflectra 300 mg IV at weeks 0, 2, 6, then every 8 weeks. Dx: Crohn's disease of large intestine.",
+      "answer_key": {
+        "product": "Inflectra (infliximab-dyyb)",
+        "hcpcs_code": "Q5103",
+        "dose": "300 mg (5 mg/kg x 60 kg)",
+        "frequency": "weeks 0, 2 and 6, then every 8 weeks",
+        "units_per_dose": 30,
+        "dx_accepted": [
+          "K50.10"
+        ],
+        "criteria_status": "not_met",
+        "missing_or_problems": [
+          "No documented negative TB test (skin test or interferon-release assay) within 12 months for a biologic-naive member."
+        ],
+        "action": "pend_for_info",
+        "hcpcs_accepted": [
+          "Q5103"
+        ],
+        "benefit": "medical"
+      },
+      "trap": "Everything else in the chart is strong, which makes the missing TB test easy to skip.",
+      "severity_if_missed": "delay",
+      "rationale": "CPB 0341 Crohn's: moderately to severely active CD; GI prescriber; no prior-therapy requirement. Biologic-naive members need a documented negative TB test (skin test or IGRA) within 12 months of starting. No concurrent biologic or targeted synthetic. Q5103 = 10 mg per unit, 300 mg = 30 units."
+    },
+    {
+      "id": "I3",
+      "drug": "Infliximab (Remicade) IV",
+      "policy": "UHC_2026D0004AR",
+      "case_type": "drug_layer_trap",
+      "patient": "IF (same chart as I1)",
+      "case_note": "Commercial UnitedHealthcare plan, medical benefit.",
+      "chart": "Identical to I1, except the plan line reads: 'Plan: start infliximab (Remicade) 5 mg/kg = 400 mg IV at weeks 0, 2 and 6, then every 8 weeks. Continue azathioprine.'",
+      "request_as_drafted": "Remicade 400 mg IV at weeks 0, 2, 6, then every 8 weeks. Dx: Crohn's disease of small intestine.",
+      "answer_key": {
+        "product": "Inflectra (infliximab-dyyb) or Avsola (infliximab-axxq) instead of Remicade",
+        "hcpcs_code": "Q5103 or Q5121 (not J1745)",
+        "dose": "400 mg",
+        "frequency": "weeks 0, 2 and 6, then every 8 weeks",
+        "units_per_dose": 40,
+        "dx_accepted": [
+          "K50.00"
+        ],
+        "criteria_status": "not_met",
+        "missing_or_problems": [
+          "Remicade is non-preferred. It needs a 14+ week trial of Inflectra or Avsola with minimal response plus attestation, or an intolerance, contraindication or adverse event. None documented."
+        ],
+        "action": "fix_request",
+        "hcpcs_accepted": [
+          "Q5103",
+          "Q5121"
+        ],
+        "hcpcs_as_drafted": "J1745",
+        "benefit": "medical"
+      },
+      "trap": "Clinical criteria are fully met, so a model may approve the product as written.",
+      "severity_if_missed": "decision_changing",
+      "rationale": "2026D0004AR pp. 1-2: Inflectra and Avsola preferred; Remicade and Renflexis non-preferred with the trial or intolerance requirement. J1745 = infliximab excluding biosimilar, 10 mg per unit; Q5103 Inflectra and Q5121 Avsola are 10 mg per unit."
+    },
+    {
+      "id": "Z1",
+      "drug": "Zepbound (tirzepatide)",
+      "policy": "CIGNA_IP0816",
+      "case_type": "clean",
+      "patient": "ZB (same chart as Z3)",
+      "case_note": "Commercial Cigna plan with weight loss coverage, pharmacy benefit.",
+      "chart": "Primary care note, 10/28/2026. Synthetic patient ZB, 41-year-old female. Height 165 cm, weight 85.5 kg, BMI 31.4. Hypertension on lisinopril. Never treated with a GLP-1 or GLP-1/GIP agonist. Enrolled in a structured lifestyle program (dietitian visits and behavioral counseling) since 06/2026, following a reduced-calorie diet, weight down 1.5 kg. Plan: start tirzepatide (Zepbound) 2.5 mg SC weekly for 4 weeks, then 5 mg weekly; continue reduced-calorie diet and program.",
+      "request_as_drafted": "Zepbound 2.5 mg SC once weekly, 4 single-dose pens per 28 days. Dx: obesity, BMI 31.4, hypertension.",
+      "answer_key": {
+        "product": "Zepbound (tirzepatide) 2.5 mg/0.5 mL single-dose pen",
+        "hcpcs_code": "N/A (pharmacy benefit)",
+        "dose": "2.5 mg",
+        "frequency": "once weekly",
+        "units_per_dose": null,
+        "dx_accepted": [
+          "E66.811",
+          "E66.9"
+        ],
+        "dx_secondary_expected": [
+          "Z68.31",
+          "I10"
+        ],
+        "criteria_status": "met",
+        "missing_or_problems": [],
+        "action": "submit",
+        "hcpcs_accepted": [],
+        "benefit": "pharmacy"
+      },
+      "trap": "None by design. Tests for false alarms, such as demanding 6 months of lifestyle program (another payer's rule) or prior oral drugs.",
+      "severity_if_missed": "false_alarm",
+      "rationale": "IP0816 pp. 4-5: age 18+; at least 3 months of behavioral modification and dietary restriction; baseline BMI 30+ (or 27+ with comorbidity), measured before any GLP-1; used with behavioral modification and reduced-calorie diet. Initial approval 8 months. Policy p. 2: 2.5 mg weekly is the starting dose, for initiation only."
+    },
+    {
+      "id": "Z2",
+      "drug": "Zepbound (tirzepatide)",
+      "policy": "AETNA_6947C",
+      "case_type": "gap",
+      "patient": "ZB2",
+      "case_note": "Commercial Aetna plan that applies policy 6947-C, pharmacy benefit.",
+      "chart": "Primary care note, 10/30/2026. Synthetic patient ZB2, 38-year-old male. Height 174 cm, weight 100 kg, BMI 33.0. Dyslipidemia on atorvastatin. Never treated with a weight-loss medication. Joined employer-sponsored weight management program (nutrition coaching, activity plan, monthly follow-up visits) in 08/2026; 3 months completed. Plan: start tirzepatide (Zepbound) 2.5 mg SC weekly; continue program.",
+      "request_as_drafted": "Zepbound 2.5 mg SC once weekly, 4 single-dose pens per 28 days. Dx: obesity, BMI 33.0, dyslipidemia. Patient participating in weight management program.",
+      "answer_key": {
+        "product": "Zepbound (tirzepatide) 2.5 mg/0.5 mL single-dose pen",
+        "hcpcs_code": "N/A (pharmacy benefit)",
+        "dose": "2.5 mg",
+        "frequency": "once weekly",
+        "quantity_per_fill": "4 pens (2 mL) per 28 days",
+        "units_per_dose": null,
+        "dx_accepted": [
+          "E66.811",
+          "E66.9"
+        ],
+        "dx_secondary_expected": [
+          "Z68.33",
+          "E78.5"
+        ],
+        "criteria_status": "not_met",
+        "missing_or_problems": [
+          "Policy requires participation in a comprehensive weight management program with continuing follow-up for at least 6 months before starting drug therapy. Only 3 months documented."
+        ],
+        "action": "pend_for_info",
+        "hcpcs_accepted": [],
+        "benefit": "pharmacy"
+      },
+      "trap": "Three months of a lifestyle program is enough for Cigna (Z1). A model that carries that over will approve this one.",
+      "severity_if_missed": "decision_changing",
+      "rationale": "6947-C (P04-2025): adults; baseline BMI 30+ or 27+ with a weight-related comorbidity; comprehensive weight management program with continuing follow-up for at least 6 months before starting drug therapy. Initial approval 8 months. The posted page's quantity limit table lists 'Tirzepatide (Brand Mounjaro)' in every row (2 mL, 4 pens, per 21 days for a 28-day fill), not Zepbound. Flagged by the model in run 1. Pend for any earlier program participation; otherwise resubmit once 6 months are documented."
+    },
+    {
+      "id": "Z3",
+      "drug": "Zepbound (tirzepatide)",
+      "policy": "CIGNA_IP0816",
+      "case_type": "drug_layer_trap",
+      "patient": "ZB (same chart as Z1)",
+      "case_note": "Commercial Cigna plan with weight loss coverage, pharmacy benefit.",
+      "chart": "Identical to Z1, except the plan line reads: 'Plan: start tirzepatide (Zepbound) 5 mg SC weekly; continue reduced-calorie diet and program.'",
+      "request_as_drafted": "Zepbound 5 mg SC once weekly, 4 single-dose pens per 28 days. Dx: obesity, BMI 31.4, hypertension.",
+      "answer_key": {
+        "product": "Zepbound (tirzepatide) 2.5 mg/0.5 mL single-dose pen",
+        "hcpcs_code": "N/A (pharmacy benefit)",
+        "dose": "2.5 mg (not 5 mg) for the first 4 weeks",
+        "frequency": "once weekly",
+        "units_per_dose": null,
+        "dx_accepted": [
+          "E66.811",
+          "E66.9"
+        ],
+        "dx_secondary_expected": [
+          "Z68.31",
+          "I10"
+        ],
+        "criteria_status": "met",
+        "missing_or_problems": [
+          "Starting dose should be 2.5 mg weekly for initiation, then 5 mg at week 4. The request starts at 5 mg in a GLP-1-naive patient."
+        ],
+        "action": "fix_request",
+        "hcpcs_accepted": [],
+        "benefit": "pharmacy"
+      },
+      "trap": "Coverage criteria are met, so a model may submit the 5 mg request as written.",
+      "severity_if_missed": "delay",
+      "rationale": "IP0816 p. 2: starting dose 2.5 mg SC once weekly, for initiation only; 5 mg at week 4; maximum 15 mg. Coverage criteria pp. 4-5 met as in Z1. Confirm the dose with the prescriber before submitting."
+    }
+  ]
+}

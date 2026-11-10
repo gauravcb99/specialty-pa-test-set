@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "reviewer": "Gaurav Bhatti",
+    "method": "Each model output read against the case's answer key and the attached payer policy. Disputed points checked against the posted policy text.",
+    "false_alarm_definition": "Flags a problem the policy doesn't have, or asks for proof the chart already gives."
+  },
+  "cases": {
+    "S1": {
+      "key_problem_found": null,
+      "designed_trap_avoided": true,
+      "false_alarms": [
+        {"text": "Pended for an explicit statement that Skyrizi won't be combined with another biologic or targeted synthetic. The chart lists none, prior or current, and the plan names one drug.", "changed_action": true}
+      ],
+      "test_set_issues": [],
+      "notes": ["Liver enzyme item is labeled as not a coverage criterion. Correct: it sits in the CPB 1009 background section, not the criteria."]
+    },
+    "S2": {
+      "key_problem_found": true,
+      "designed_trap_avoided": true,
+      "false_alarms": [
+        {"text": "Same no-combination flag as S1.", "changed_action": false}
+      ],
+      "test_set_issues": [],
+      "notes": ["Correctly said the TB and hepatitis B results aren't UHC criteria for this drug."]
+    },
+    "S3": {
+      "key_problem_found": true,
+      "designed_trap_avoided": true,
+      "false_alarms": [],
+      "test_set_issues": ["The S3 chart never states complication status, so K50.80 ('without complications') isn't fully supported. The model flagged it. Fix: add the assessment line."],
+      "notes": []
+    },
+    "I1": {
+      "key_problem_found": null,
+      "designed_trap_avoided": true,
+      "false_alarms": [],
+      "test_set_issues": [],
+      "notes": ["Did not flag continued azathioprine. Correct: the policy bars combination with a targeted immunomodulator, not azathioprine."]
+    },
+    "I2": {
+      "key_problem_found": true,
+      "designed_trap_avoided": true,
+      "false_alarms": [],
+      "test_set_issues": [],
+      "notes": []
+    },
+    "I3": {
+      "key_problem_found": true,
+      "designed_trap_avoided": true,
+      "false_alarms": [],
+      "test_set_issues": ["The case note didn't say the plan is a Medical Necessity Plan. Policy 2026D0004AR applies the preferred-product rule only to those plans; other plans can cover any infliximab. The model caught the gap and still chose fix_request. Fix: state plan type, as S2 does."],
+      "notes": ["Kept J1745 in hcpcs_code and gave Q5103 or Q5121 in problems. The prompt didn't say whether fields show the request as drafted or as corrected."]
+    },
+    "Z1": {
+      "key_problem_found": null,
+      "designed_trap_avoided": true,
+      "false_alarms": [],
+      "test_set_issues": [],
+      "notes": []
+    },
+    "Z2": {
+      "key_problem_found": true,
+      "designed_trap_avoided": true,
+      "false_alarms": [],
+      "test_set_issues": ["Aetna's posted 6947-C quantity limit table names 'Tirzepatide (Brand Mounjaro)' in every row, not Zepbound. The model caught it. The answer key had read it as a Zepbound limit."],
+      "notes": ["Asked for confirmation of a reduced-calorie diet and increased activity. Defensible: the policy requires both and the chart says 'nutrition coaching, activity plan.'"]
+    },
+    "Z3": {
+      "key_problem_found": true,
+      "designed_trap_avoided": true,
+      "false_alarms": [
+        {"text": "Marked concomitant GLP-1 use 'unclear' although the chart says never treated with a GLP-1 and the plan names one drug. Not raised at all on the same chart in Z1.", "changed_action": false}
+      ],
+      "test_set_issues": [],
+      "notes": []
+    }
+  },
+  "no_combination_criterion": {
+    "note": "How the model judged the 'not used with another biologic / GLP-1' criterion when the chart says none prior and the plan names one drug.",
+    "S1": "unclear", "S2": "unclear", "S3": "not assessed",
+    "I1": "met", "I2": "met", "I3": "met",
+    "Z1": "not assessed", "Z2": "not assessed", "Z3": "unclear"
+  },
+  "prompt_issues": [
+    "overall_criteria_status values weren't defined. The model used 'unclear' for missing documentation (S3, I2) where the key says not_met.",
+    "The prompt didn't say whether product, code and dose fields show the request as drafted or as corrected (I3, Z3)."
+  ]
+}

@@ -1,0 +1,578 @@
+{
+  "meta": {
+    "model": "GPT6 Extra (ChatGPT)",
+    "run_date": "2026-11-09",
+    "test_set_version": "0.1.2",
+    "settings": "new chat per case; saved memory and reference chat history off"
+  },
+  "outputs": {
+    "S1": {
+      "product": "Skyrizi (risankizumab-rzaa) 600 mg/10 mL single-dose vial for IV infusion",
+      "hcpcs_code": "J2327",
+      "dose": "600 mg IV infused over at least 1 hour",
+      "frequency": "Induction: one IV infusion at Week 0, Week 4, and Week 8; 3 doses total",
+      "units_per_dose": 600,
+      "quantity_per_fill": "1 single-dose vial (600 mg/10 mL) per infusion; 3 vials (1,800 mg total) for the induction course",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Applicable Aetna commercial medical benefit policy",
+          "met": "yes",
+          "chart_evidence": "Request is for Skyrizi IV induction under a commercial Aetna medical benefit. Aetna Medical Clinical Policy Bulletin 1009 applies."
+        },
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "GI clinic note dated 10/20/2026 identifies the prescriber as a board-certified gastroenterologist."
+        },
+        {
+          "criterion": "Initial treatment of moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "34-year-old female with ileocolonic Crohn's disease diagnosed 03/2024. Assessment explicitly documents moderately to severely active disease. CDAI 310, 6 to 8 loose stools daily, crampy abdominal pain, 3 kg weight loss over 2 months, deep ulcers in terminal ileum and ascending colon on 09/2026 colonoscopy, CRP 18 mg/L, and fecal calprotectin 640 mcg/g."
+        },
+        {
+          "criterion": "Prior therapy requirements for initial Crohn's disease approval",
+          "met": "yes",
+          "chart_evidence": "Mesalamine 4.8 g/day from 11/2025 through 05/2026 produced an inadequate response. No corticosteroid, immunomodulator, biologic, or targeted synthetic drug exposure is documented. Aetna CPB 1009 does not require failure of these therapies for initial approval of moderately to severely active Crohn's disease."
+        },
+        {
+          "criterion": "Tuberculosis evaluation before biologic treatment",
+          "met": "yes",
+          "chart_evidence": "QuantiFERON-TB Gold negative on 10/02/2026, before planned risankizumab initiation."
+        },
+        {
+          "criterion": "No concomitant biologic or targeted synthetic drug for the same indication",
+          "met": "unclear",
+          "chart_evidence": "Chart documents no prior biologic or targeted synthetic drug therapy. However, it does not explicitly confirm that the patient will not use another biologic or targeted synthetic drug concurrently with Skyrizi for Crohn's disease."
+        },
+        {
+          "criterion": "Appropriate IV induction dose and schedule for adult Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Prescriber requests 600 mg IV at Weeks 0, 4, and 8, matching Aetna CPB 1009's recommended adult Crohn's disease induction regimen. The policy specifies infusion over at least 1 hour."
+        },
+        {
+          "criterion": "HCPCS coding and billing units",
+          "met": "yes",
+          "chart_evidence": "Aetna CPB 1009 identifies J2327 as injection, risankizumab-rzaa, intravenous, 1 mg. A 600 mg IV dose corresponds to 600 HCPCS units. One 600 mg/10 mL vial is required per dose."
+        },
+        {
+          "criterion": "Diagnosis within policy-covered ICD-10-CM range",
+          "met": "yes",
+          "chart_evidence": "Documented Crohn's disease affects both the terminal ileum and ascending colon, without complications. K50.80 identifies Crohn's disease of both small and large intestine without complications and falls within the policy's covered K50.00-K50.919 range."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "Obtain explicit prescriber confirmation that Skyrizi will not be used concomitantly with another biologic or targeted synthetic drug for Crohn's disease. The chart's statement of no prior exposure does not establish the required prospective confirmation.",
+        "Baseline liver enzymes and bilirubin are not documented. The policy's prescribing-information precautions recommend evaluation at baseline and monitoring during induction through at least Week 12 for Crohn's disease. This is a safety documentation gap, not an explicitly stated initial-approval criterion.",
+        "The office's draft does not include HCPCS J2327, 600 billing units per dose, or ICD-10-CM K50.80. These should be populated in the authorization submission.",
+        "The office's draft does not specify the infusion duration. The administration order should indicate infusion over at least 1 hour, consistent with the policy.",
+        "No corticosteroid, immunomodulator, or prior biologic failure is documented; these are not required by the attached policy for initial Crohn's disease approval.",
+        "The planned subcutaneous maintenance beginning at Week 12 is separate from the current IV induction authorization request."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "S2": {
+      "product": "Skyrizi (risankizumab-rzaa), intravenous induction",
+      "hcpcs_code": "J2327",
+      "dose": "600 mg IV",
+      "frequency": "Weeks 0, 4, and 8 (3 induction doses)",
+      "units_per_dose": 600,
+      "quantity_per_fill": "600 mg (600 HCPCS units) per infusion; 3 induction doses totaling 1,800 mg (1,800 HCPCS units)",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Diagnosis of moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "GI assessment confirms moderately to severely active ileocolonic Crohn's disease without complications. CDAI 310, 6-8 loose stools daily, abdominal pain, 3 kg weight loss, deep ileocolonic ulcers, CRP 18 mg/L, and fecal calprotectin 640 mcg/g."
+        },
+        {
+          "criterion": "Failure of qualifying conventional therapy at up to maximally indicated doses unless contraindicated or clinically significant adverse effects occurred, OR prior treatment with an FDA-approved systemic targeted immunomodulator for Crohn's disease",
+          "met": "no",
+          "chart_evidence": "Mesalamine 4.8 g/day for 6 months produced inadequate response, but mesalamine is not among the qualifying conventional therapies listed in the policy. The chart explicitly documents no corticosteroids, immunomodulators, prior biologics, or targeted synthetic drugs. No contraindication or clinically significant adverse effects to qualifying conventional therapies are documented."
+        },
+        {
+          "criterion": "Skyrizi administered as three intravenous induction doses",
+          "met": "yes",
+          "chart_evidence": "Prescriber requests three IV induction doses at weeks 0, 4, and 8."
+        },
+        {
+          "criterion": "Induction dosing consistent with FDA-labeled dosing for Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Requested 600 mg IV at weeks 0, 4, and 8 is consistent with the Crohn's disease induction regimen described in the payer policy."
+        },
+        {
+          "criterion": "Not receiving Skyrizi in combination with another systemic targeted immunomodulator for the same indication",
+          "met": "yes",
+          "chart_evidence": "The chart documents no immunomodulators and no prior biologic or targeted synthetic drug therapy. No concomitant systemic targeted immunomodulator is identified."
+        },
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "Prescriber is a board-certified gastroenterologist."
+        },
+        {
+          "criterion": "Authorization limited to three induction doses",
+          "met": "yes",
+          "chart_evidence": "The IV authorization request is for three induction doses only. Subsequent subcutaneous maintenance is planned separately."
+        }
+      ],
+      "overall_criteria_status": "not_met",
+      "missing_or_problems": [
+        "The primary medical necessity requirement for qualifying prior therapy is not met.",
+        "Mesalamine failure does not satisfy the policy's conventional therapy requirement. The listed qualifying therapies are corticosteroids, 6-mercaptopurine, azathioprine, and methotrexate.",
+        "The chart explicitly documents no prior use of the qualifying conventional therapies and no prior biologic or targeted synthetic drug therapy.",
+        "No contraindication or clinically significant adverse effects to qualifying conventional therapies are documented that could support an exception under the policy.",
+        "The product, IV induction dose, frequency, HCPCS code J2327, and diagnosis code K50.80 are appropriate. No correction to these elements is required.",
+        "The policy distinguishes proven treatment criteria from medical necessity criteria. Although the request satisfies the documented dosing and disease activity requirements, it does not satisfy all medical necessity criteria applicable to this commercial plan.",
+        "Subcutaneous maintenance is generally obtained under the pharmacy benefit and is not included in this IV induction authorization."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "S3": {
+      "product": "Skyrizi (risankizumab-rzaa) 360 mg subcutaneous single-dose prefilled cartridge for on-body injector",
+      "hcpcs_code": "N/A (pharmacy benefit)",
+      "dose": "360 mg subcutaneously via on-body injector",
+      "frequency": "Every 8 weeks",
+      "units_per_dose": null,
+      "quantity_per_fill": "1 prefilled cartridge (360 mg) per 56 days",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "FDA-approved indication: Moderate to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "GI note dated 10/22/2026 documents moderately to severely active ileocolonic Crohn's disease without complications, diagnosed 03/2024. Current CDAI 280, CRP 12 mg/L, 5 loose stools per day, and abdominal pain."
+        },
+        {
+          "criterion": "Continuation pathway eligibility: Patient currently receiving Skyrizi SC and established on therapy for at least 6 months (Policy IP0670, Section 1.B.i)",
+          "met": "no",
+          "chart_evidence": "Patient previously received Skyrizi SC from 04/2025 through 02/2026, exceeding 6 months, but discontinued in 02/2026 due to an insurance coverage lapse. The 10/22/2026 plan explicitly states 'Restart Skyrizi.' Policy specifies that patients restarting therapy must be reviewed under Initial Therapy criterion A, regardless of prior treatment duration."
+        },
+        {
+          "criterion": "Continuation pathway: Beneficial clinical response from baseline by objective measure or improvement in at least one symptom (Section 1.B.ii)",
+          "met": "unclear",
+          "chart_evidence": "Historical clinical remission with CDAI under 150 while receiving Skyrizi is documented. However, pretreatment baseline objective measurements or symptom comparisons from before initial Skyrizi initiation are not provided. More importantly, the patient is restarting therapy and is therefore ineligible for the continuation pathway regardless of historical response."
+        },
+        {
+          "criterion": "Initial Therapy: Patient older than 18 years (Section 1.A.i)",
+          "met": "yes",
+          "chart_evidence": "Patient is a 34-year-old female."
+        },
+        {
+          "criterion": "Initial Therapy: According to the prescriber, patient will receive Skyrizi IV induction dosing within 3 months of initiating Skyrizi SC (Section 1.A.ii)",
+          "met": "unclear",
+          "chart_evidence": "Patient previously completed Skyrizi 600 mg IV induction from 01/2025 through 03/2025. However, no new IV induction plan or prescriber attestation is documented for the 2026 restart. Historical induction does not establish that induction will occur within 3 months of restarting SC therapy."
+        },
+        {
+          "criterion": "Initial Therapy: Prescribed by or in consultation with a gastroenterologist (Section 1.A.iii)",
+          "met": "yes",
+          "chart_evidence": "The 10/22/2026 treatment plan was documented by a gastroenterologist."
+        },
+        {
+          "criterion": "Appropriate Skyrizi SC formulation and maintenance dosing for Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "The prescriber requests Skyrizi 360 mg SC every 8 weeks via on-body injector. The policy identifies the 360 mg single-dose cartridge and every-8-week SC maintenance dosing for Crohn's disease. This does not establish that the induction requirement for restarting therapy has been satisfied."
+        },
+        {
+          "criterion": "Exclusion: No concurrent use with another biologic or targeted synthetic oral small molecule drug for an inflammatory condition",
+          "met": "unclear",
+          "chart_evidence": "The supplied chart does not document a complete current medication list or explicitly address concurrent biologic or targeted synthetic therapy."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "The office incorrectly classified the request as continuation of therapy. Under Cigna Policy IP0670, Section 1.B.i, a patient restarting Skyrizi must be evaluated using Initial Therapy criteria, even if previously established on treatment for more than 6 months.",
+        "The patient has been off Skyrizi since 02/2026. Historical remission and prior treatment duration do not override the policy's explicit restart classification rule.",
+        "The Initial Therapy pathway requires a prescriber statement that Skyrizi IV induction dosing will be administered within 3 months of initiating SC therapy. No such plan or attestation is documented for the current restart.",
+        "The prior IV induction course from 01/2025 to 03/2025 does not satisfy the documented prospective induction requirement for the 2026 restart.",
+        "The office should correct the request classification to Initial Therapy (restart) and obtain clarification from the gastroenterologist regarding the planned IV induction course before submission.",
+        "Current concurrent biologic or targeted synthetic oral therapy status is not documented and should be verified without assuming the patient is receiving no other therapy.",
+        "The requested SC product and 360 mg every-8-week maintenance dose do not independently require correction based on the supplied policy. The outstanding issue is documentation supporting the restart under Initial Therapy criteria."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "I1": {
+      "product": "Inflectra (infliximab-dyyb)",
+      "hcpcs_code": "Q5103",
+      "dose": "5 mg/kg = 400 mg IV per infusion (80 kg × 5 mg/kg)",
+      "frequency": "Induction at weeks 0, 2, and 6; maintenance every 8 weeks thereafter",
+      "units_per_dose": 40,
+      "quantity_per_fill": "400 mg per infusion (40 HCPCS units at 10 mg per unit)",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Preferred infliximab product for Medical Necessity Plans",
+          "met": "yes",
+          "chart_evidence": "Inflectra (infliximab-dyyb) is a preferred infliximab product under the UnitedHealthcare Commercial Medical Benefit Drug Policy, effective 02/01/2026. The office requests Inflectra. Additional non-preferred product step requirements do not apply."
+        },
+        {
+          "criterion": "Diagnosis of moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "GI clinic note dated 10/15/2026 documents moderately to severely active ileal Crohn's disease diagnosed 06/2023. CDAI 290, 6 stools daily, abdominal pain, CRP 22 mg/L, and MR enterography from 09/2026 showing 25 cm of active terminal ileal inflammation. No stricture or fistula. Diagnosis is K50.00, Crohn's disease of small intestine without complications."
+        },
+        {
+          "criterion": "At least one qualifying pathway: high-risk disease, failure of conventional therapy, prior systemic targeted immunomodulator, or current infliximab use",
+          "met": "yes",
+          "chart_evidence": "The conventional therapy failure pathway is satisfied. Prednisone 40 mg taper over 8 weeks (03/2025–05/2025) resulted in flare at the end of taper. Azathioprine 200 mg daily (2.5 mg/kg, normal TPMT activity) since 01/2026 has produced inadequate disease control after 9 months, with persistent symptoms, CDAI 290, CRP 22 mg/L, and active inflammation on imaging. The gastroenterologist explicitly documents failure of corticosteroids and azathioprine. Prior biologic or targeted synthetic treatment is not required because the conventional therapy failure pathway is satisfied."
+        },
+        {
+          "criterion": "Infliximab dosed according to FDA-labeled dosing for Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Prescribed dose is 5 mg/kg IV at weeks 0, 2, and 6, followed by every 8 weeks. At the documented weight of 80 kg, the calculated dose is 400 mg per infusion. This is the standard labeled Crohn's disease induction and maintenance regimen."
+        },
+        {
+          "criterion": "No concurrent systemic targeted immunomodulator for the same indication",
+          "met": "yes",
+          "chart_evidence": "Chart explicitly documents no prior biologic or targeted synthetic drug. The plan is to continue azathioprine, a conventional immunosuppressant, alongside Inflectra. Azathioprine is not one of the prohibited concurrent systemic targeted immunomodulators identified in the policy. No prohibited concurrent targeted therapy is documented."
+        },
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "The 10/15/2026 GI clinic note identifies the prescriber as a gastroenterologist."
+        },
+        {
+          "criterion": "Initial authorization limited to no more than 12 months",
+          "met": "yes",
+          "chart_evidence": "This is an initial therapy request. The chart documents no prior infliximab treatment, and the office request does not specify an authorization period exceeding 12 months. Initial authorization must be limited to no more than 12 months under the policy."
+        },
+        {
+          "criterion": "Correct HCPCS code and billing units for the requested medical-benefit product",
+          "met": "yes",
+          "chart_evidence": "The policy's Applicable Codes section identifies Q5103 as injection, infliximab-dyyb (Inflectra), 10 mg. A 400 mg infusion equals 40 HCPCS billing units. The requested product and dose are consistent with this coding."
+        }
+      ],
+      "overall_criteria_status": "met",
+      "missing_or_problems": [],
+      "recommended_action": "submit"
+    },
+    "I2": {
+      "product": "Inflectra (infliximab-dyyb), intravenous infusion",
+      "hcpcs_code": "Q5103",
+      "dose": "5 mg/kg × 60 kg = 300 mg IV per infusion",
+      "frequency": "Induction: weeks 0, 2, and 6. Maintenance: every 8 weeks thereafter.",
+      "units_per_dose": 30,
+      "quantity_per_fill": "300 mg per infusion (3 single-dose vials of 100 mg each); 900 mg total (9 vials) for the three induction doses.",
+      "diagnosis_codes": [
+        "K50.111"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "CPB 0341 Section II.A: Initial approval for moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "GI note dated 10/27/2026 documents moderately to severely active colonic Crohn's disease diagnosed in 2022, with 7 bloody stools daily, CDAI 300, and extensive colonic ulceration on colonoscopy in 10/2026."
+        },
+        {
+          "criterion": "CPB 0341 Section I.A: Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "Prescriber is a gastroenterologist."
+        },
+        {
+          "criterion": "CPB 0341 Section IV: Documented negative tuberculosis test within 12 months before initiating therapy in a biologic-naive patient",
+          "met": "unclear",
+          "chart_evidence": "Patient has no prior biologic or targeted synthetic drug exposure. No tuberculosis screening is on file. A documented negative TST or IGRA within 12 months of initiation is required. This requirement is not established by the available chart."
+        },
+        {
+          "criterion": "CPB 0341 Section IV: No concomitant biologic or targeted synthetic drug for the same indication",
+          "met": "yes",
+          "chart_evidence": "Chart documents no prior biologic or targeted synthetic drug use. Current treatment lists budesonide, with no concurrent biologic or targeted synthetic drug documented."
+        },
+        {
+          "criterion": "CPB 0341 dosage recommendations: Appropriate induction and maintenance dosing for adult moderate-to-severe Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Patient weighs 60 kg. Requested 5 mg/kg equals 300 mg IV at weeks 0, 2, and 6, followed by 300 mg every 8 weeks, matching the policy dosing table."
+        },
+        {
+          "criterion": "CPB 0341: Requested product is included among medically necessary infliximab products for Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Inflectra (infliximab-dyyb) IV is explicitly included in the policy. The case specifies no separate preferred-product program."
+        },
+        {
+          "criterion": "CPB 0341 HCPCS coding: Correct product-specific code and billing units",
+          "met": "yes",
+          "chart_evidence": "Q5103 describes injection, infliximab-dyyb (Inflectra), 10 mg. A 300 mg dose requires 30 HCPCS units. The requested product and dose are correct."
+        },
+        {
+          "criterion": "CPB 0341: Prior treatment requirements for initial approval of Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Budesonide 9 mg daily from 08/2026 through 10/2026 produced no response. The patient has not previously received biologic or targeted synthetic therapy. Section II.A requires moderately to severely active Crohn's disease but does not impose a prior biologic trial or conventional therapy failure requirement."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "Required tuberculosis screening documentation is missing. Obtain a documented negative TST or IGRA performed within 12 months before initiating Inflectra.",
+        "If tuberculosis screening is positive, CPB 0341 requires additional evaluation to exclude active tuberculosis. Latent tuberculosis treatment must begin before Inflectra initiation; active tuberculosis precludes administration.",
+        "Hepatitis B surface antigen was negative in 10/2026, but this does not substitute for required tuberculosis screening.",
+        "No product, HCPCS code, dose, frequency, or diagnosis correction is identified. Use Q5103 with 30 billing units per 300 mg infusion."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "I3": {
+      "product": "Inflectra (infliximab-dyyb), preferred alternative to the requested Remicade (infliximab); change requires prescriber approval",
+      "hcpcs_code": "Q5103",
+      "dose": "5 mg/kg × 80 kg = 400 mg IV per infusion",
+      "frequency": "Induction at weeks 0, 2, and 6; maintenance every 8 weeks thereafter",
+      "units_per_dose": 40,
+      "quantity_per_fill": "400 mg per infusion (40 HCPCS units); 3 induction infusions totaling 1,200 mg (120 HCPCS units), followed by 400 mg (40 units) per maintenance infusion",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Diagnosis of moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "GI note dated 10/15/2026 documents moderately to severely active ileal Crohn's disease. CDAI 290, 6 stools/day, abdominal pain, CRP 22 mg/L, and September 2026 MR enterography showing 25 cm of active terminal ileal inflammation."
+        },
+        {
+          "criterion": "History of failure of at least one conventional therapy at up to maximally indicated doses, unless contraindicated or clinically significant adverse effects occurred",
+          "met": "yes",
+          "chart_evidence": "Prednisone 40 mg taper over 8 weeks from 03/2025 to 05/2025 resulted in flare at the end of the taper. Azathioprine 200 mg daily (2.5 mg/kg, normal TPMT activity) since 01/2026 resulted in persistent active disease after 9 months. Both corticosteroids and azathioprine are qualifying conventional therapies under the policy."
+        },
+        {
+          "criterion": "Infliximab dosed according to FDA-labeled dosing for Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Prescribed 5 mg/kg IV at weeks 0, 2, and 6, followed by every 8 weeks. At 80 kg, the calculated dose is 400 mg per infusion, consistent with the standard labeled Crohn's disease regimen."
+        },
+        {
+          "criterion": "No concurrent systemic targeted immunomodulator for the same indication",
+          "met": "yes",
+          "chart_evidence": "Chart explicitly documents no prior biologic or targeted synthetic therapy. Planned concomitant azathioprine is a conventional immunosuppressant, not a systemic targeted immunomodulator of the type prohibited by this policy."
+        },
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "Prescriber is explicitly documented as a gastroenterologist."
+        },
+        {
+          "criterion": "Initial authorization for no more than 12 months",
+          "met": "unclear",
+          "chart_evidence": "The request specifies induction and ongoing maintenance dosing but does not state an authorization duration. The policy limits initial authorization to no more than 12 months."
+        },
+        {
+          "criterion": "Medical Necessity Plan preferred-product requirement",
+          "met": "no",
+          "chart_evidence": "The office requested Remicade, which is non-preferred. The policy identifies Inflectra and Avsola as preferred infliximab products. The patient has no prior biologic therapy and therefore has no documented trial of either preferred product."
+        },
+        {
+          "criterion": "Non-preferred Remicade exception: at least 14 weeks of Inflectra or Avsola with minimal clinical response and residual disease activity, plus physician attestation of expected superior response to Remicade",
+          "met": "no",
+          "chart_evidence": "No prior biologic treatment is documented. There is no 14-week preferred-product trial or physician attestation supporting superior response to Remicade."
+        },
+        {
+          "criterion": "Alternative non-preferred Remicade exception: intolerance, contraindication, or adverse event to Inflectra or Avsola, plus physician attestation that the same event would not be expected with Remicade",
+          "met": "no",
+          "chart_evidence": "No intolerance, contraindication, or adverse event to Inflectra or Avsola is documented. The required physician attestation is absent."
+        },
+        {
+          "criterion": "No loss of favorable response after established maintenance therapy with a preferred or other infliximab biosimilar",
+          "met": "yes",
+          "chart_evidence": "The patient has never received a biologic, so there is no history of loss of favorable response during established infliximab biosimilar maintenance therapy."
+        },
+        {
+          "criterion": "Diagnosis code supported by documented disease location and complication status",
+          "met": "yes",
+          "chart_evidence": "Ileal Crohn's disease without complications is documented. MR enterography shows no stricture or fistula. K50.00 is listed in the policy as Crohn's disease of small intestine without complications."
+        }
+      ],
+      "overall_criteria_status": "not_met",
+      "missing_or_problems": [
+        "The original Remicade request does not meet the Medical Necessity Plan's non-preferred-product requirements.",
+        "Neither a qualifying preferred-product failure nor a qualifying intolerance, contraindication, or adverse event is documented.",
+        "No physician attestation supporting a non-preferred Remicade exception is documented.",
+        "Inflectra or Avsola should be considered because both are preferred under the attached policy.",
+        "The proposed Inflectra substitution requires prescriber approval; the chart currently orders Remicade.",
+        "If Inflectra is selected, use HCPCS Q5103 rather than Remicade's J1745. Both codes represent 10 mg per billing unit, resulting in 40 units for a 400 mg dose. Avsola, the other preferred option, uses Q5121.",
+        "The original office request lacks an explicit diagnosis code. Add K50.00.",
+        "The requested authorization period is not specified; limit the initial authorization request to no more than 12 months.",
+        "The chart supports the Crohn's disease-specific initial-therapy criteria. The preferred-product restriction is the reason the original Remicade request does not meet all applicable criteria.",
+        "QuantiFERON-TB Gold was negative on 10/01/2026; this is documented supporting information, not a separate initial-authorization requirement in the attached diagnosis-specific criteria."
+      ],
+      "recommended_action": "fix_request"
+    },
+    "Z1": {
+      "product": "Zepbound (tirzepatide) 2.5 mg/0.5 mL single-dose pen",
+      "hcpcs_code": "N/A (pharmacy benefit)",
+      "dose": "2.5 mg subcutaneously",
+      "frequency": "Once weekly for 4 weeks, then increase to 5 mg once weekly per treatment plan",
+      "units_per_dose": null,
+      "quantity_per_fill": "4 single-dose pens per 28 days",
+      "diagnosis_codes": [
+        "E66.9",
+        "Z68.31",
+        "I10"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Initial therapy for weight loss in an adult with overweight or obesity (Policy IP0816, Section 1.A)",
+          "met": "yes",
+          "chart_evidence": "Primary care note dated 10/28/2026 documents obesity, BMI 31.4, and no prior GLP-1 or GLP-1/GIP agonist treatment. This is an initial therapy request."
+        },
+        {
+          "criterion": "Patient is at least 18 years old (1.A.i)",
+          "met": "yes",
+          "chart_evidence": "Patient is 41 years old."
+        },
+        {
+          "criterion": "Trial of behavioral modification and dietary restriction for at least 3 months (1.A.ii)",
+          "met": "yes",
+          "chart_evidence": "Enrolled in a structured lifestyle program since 06/2026, including dietitian visits, behavioral counseling, and a reduced-calorie diet. More than 3 months of participation documented by 10/28/2026. Weight decreased 1.5 kg."
+        },
+        {
+          "criterion": "Baseline BMI at least 30 kg/m2 OR baseline BMI at least 27 kg/m2 with a qualifying weight-related comorbidity (1.A.iii)",
+          "met": "yes",
+          "chart_evidence": "BMI 31.4 kg/m2 documented on 10/28/2026 before initiation of GLP-1 or GLP-1/GIP therapy. Height 165 cm and weight 85.5 kg. Also has hypertension treated with lisinopril. Both BMI eligibility pathways are satisfied."
+        },
+        {
+          "criterion": "Medication used concomitantly with behavioral modification and a reduced-calorie diet (1.A.iv)",
+          "met": "yes",
+          "chart_evidence": "Prescriber explicitly plans to continue the reduced-calorie diet and structured lifestyle program while starting Zepbound."
+        },
+        {
+          "criterion": "No concomitant use with another GLP-1 or GLP-1/GIP agonist (Conditions Not Covered)",
+          "met": "yes",
+          "chart_evidence": "Chart states the patient has never been treated with a GLP-1 or GLP-1/GIP agonist. No concurrent agent in these classes is documented."
+        },
+        {
+          "criterion": "Starting dose consistent with policy dosing information",
+          "met": "yes",
+          "chart_evidence": "Policy identifies 2.5 mg subcutaneously once weekly as the recommended starting dose for treatment initiation, not chronic maintenance. Prescriber plans 2.5 mg weekly for 4 weeks followed by 5 mg weekly."
+        },
+        {
+          "criterion": "Commercial plan includes weight loss coverage",
+          "met": "yes",
+          "chart_evidence": "Plan context explicitly states commercial Cigna coverage with weight loss coverage under the pharmacy benefit."
+        }
+      ],
+      "overall_criteria_status": "met",
+      "missing_or_problems": [],
+      "recommended_action": "submit"
+    },
+    "Z2": {
+      "product": "Zepbound (tirzepatide) 2.5 mg/0.5 mL single-dose prefilled pen",
+      "hcpcs_code": "N/A (pharmacy benefit)",
+      "dose": "2.5 mg subcutaneously",
+      "frequency": "Once weekly",
+      "units_per_dose": null,
+      "quantity_per_fill": "4 single-dose pens (2 mL total) per 28 days",
+      "diagnosis_codes": [
+        "E66.9 - Obesity, unspecified",
+        "Z68.33 - Body mass index (BMI) 33.0-33.9, adult",
+        "E78.5 - Hyperlipidemia, unspecified (dyslipidemia)"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Adult patient requesting tirzepatide for reduction in excess body weight or long-term weight management",
+          "met": "yes",
+          "chart_evidence": "38-year-old male with obesity, BMI 33.0. Zepbound prescribed for weight management. This is an initial therapy request."
+        },
+        {
+          "criterion": "Baseline BMI >= 30 kg/m2 OR baseline BMI >= 27 kg/m2 with at least one weight-related comorbid condition",
+          "met": "yes",
+          "chart_evidence": "Primary care note dated 10/30/2026 documents height 174 cm, weight 100 kg, and BMI 33.0. Patient has never received weight-loss medication, so the documented BMI precedes drug therapy. Dyslipidemia treated with atorvastatin is an additional qualifying weight-related comorbidity."
+        },
+        {
+          "criterion": "Participation in a comprehensive weight management program encouraging behavioral modification, reduced-calorie diet, and increased physical activity, with continuing follow-up for at least 6 months before drug therapy",
+          "met": "no",
+          "chart_evidence": "Joined employer-sponsored weight management program in 08/2026. Program includes nutrition coaching, an activity plan, and monthly follow-up visits. Only 3 months completed as of the 10/30/2026 note. Policy 6947-C requires at least 6 months before starting drug therapy. The chart also does not explicitly establish all required program components."
+        },
+        {
+          "criterion": "Requested medication used in combination with a reduced-calorie diet and increased physical activity",
+          "met": "unclear",
+          "chart_evidence": "Prescriber plans to continue the employer-sponsored weight management program alongside Zepbound. Nutrition coaching and an activity plan are documented, but an explicitly reduced-calorie diet and increased physical activity are not confirmed."
+        },
+        {
+          "criterion": "Requested product and indication consistent with policy",
+          "met": "yes",
+          "chart_evidence": "Policy 6947-C includes Zepbound (tirzepatide) for adult obesity management. The office requests Zepbound rather than Mounjaro, consistent with the documented obesity indication. The requested 2.5 mg weekly regimen matches the prescriber's charted plan."
+        },
+        {
+          "criterion": "Requested quantity complies with applicable policy quantity limits",
+          "met": "unclear",
+          "chart_evidence": "The request is for 4 single-dose pens per 28 days, corresponding to one injection weekly. The attached policy's numerical quantity-limit table lists Mounjaro strengths and quantities but does not explicitly list Zepbound-specific quantity limits. Compliance with a Zepbound-specific limit cannot be confirmed from the supplied policy."
+        }
+      ],
+      "overall_criteria_status": "not_met",
+      "missing_or_problems": [
+        "The mandatory 6-month comprehensive weight management program requirement is not met. Only 3 months of participation are documented.",
+        "The chart does not explicitly confirm that the program encourages all three required components: behavioral modification, a reduced-calorie diet, and increased physical activity.",
+        "Documentation or prescriber attestation is needed to confirm that Zepbound will be used with a reduced-calorie diet and increased physical activity.",
+        "Zepbound-specific numerical quantity limits cannot be verified from the attached policy because the quantity-limit table identifies Mounjaro only.",
+        "The documented BMI satisfies the policy's baseline BMI requirement. Prior weight-loss medication treatment is not required under the applicable initial therapy criteria.",
+        "No change to the requested product or dose is indicated by the supplied documentation. The primary authorization barrier is the incomplete 6-month program requirement."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "Z3": {
+      "product": "Zepbound (tirzepatide) subcutaneous injection, single-dose pen",
+      "hcpcs_code": "N/A (pharmacy benefit)",
+      "dose": "2.5 mg SC (corrected starting dose; office requested 5 mg)",
+      "frequency": "Once weekly",
+      "units_per_dose": null,
+      "quantity_per_fill": "4 single-dose pens per 28 days",
+      "diagnosis_codes": [
+        "E66.9",
+        "Z68.31",
+        "I10"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Initial therapy for weight loss in an adult with overweight or obesity (Policy IP0816, Section 1.A)",
+          "met": "yes",
+          "chart_evidence": "Patient has obesity with BMI 31.4 and has never received a GLP-1 or GLP-1/GIP agonist. This is an initial therapy request."
+        },
+        {
+          "criterion": "1.A.i: Patient is at least 18 years of age",
+          "met": "yes",
+          "chart_evidence": "Patient is 41 years old per primary care note dated 10/28/2026."
+        },
+        {
+          "criterion": "1.A.ii: Trial of behavioral modification and dietary restriction for at least 3 months",
+          "met": "yes",
+          "chart_evidence": "Enrolled in a structured lifestyle program since 06/2026, including dietitian visits, behavioral counseling, and a reduced-calorie diet. More than 3 months completed by 10/28/2026. Weight decreased by 1.5 kg."
+        },
+        {
+          "criterion": "1.A.iii.a: Baseline BMI at least 30 kg/m2 before GLP-1 or GLP-1/GIP therapy",
+          "met": "yes",
+          "chart_evidence": "BMI 31.4 kg/m2, weight 85.5 kg, height 165 cm on 10/28/2026. Patient has never received a GLP-1 or GLP-1/GIP agonist, so the documented BMI is prior to medication initiation."
+        },
+        {
+          "criterion": "1.A.iii.b: Alternative eligibility pathway of baseline BMI at least 27 kg/m2 with a qualifying weight-related comorbidity",
+          "met": "yes",
+          "chart_evidence": "BMI 31.4 kg/m2 and documented hypertension treated with lisinopril. Hypertension is an explicitly listed qualifying comorbidity. This alternative pathway is satisfied but is not required because BMI is already at least 30 kg/m2."
+        },
+        {
+          "criterion": "1.A.iv: Medication will be used with behavioral modification and a reduced-calorie diet",
+          "met": "yes",
+          "chart_evidence": "Prescriber plans to continue the reduced-calorie diet and structured lifestyle program, including behavioral counseling, while initiating Zepbound."
+        },
+        {
+          "criterion": "Initial dosing consistent with policy dosing information",
+          "met": "no",
+          "chart_evidence": "The office requests Zepbound 5 mg SC weekly despite no prior GLP-1 or GLP-1/GIP therapy. Policy IP0816, page 2, specifies 2.5 mg SC once weekly as the recommended starting dose. The 5 mg dose is reached at Week 4 following treatment initiation."
+        },
+        {
+          "criterion": "Requested quantity and administration frequency",
+          "met": "yes",
+          "chart_evidence": "Four single-dose pens per 28 days matches once-weekly administration. Quantity and frequency can remain unchanged after correcting the starting strength to 2.5 mg."
+        }
+      ],
+      "overall_criteria_status": "met",
+      "missing_or_problems": [
+        "The patient meets all four initial weight-loss coverage criteria under Cigna Policy IP0816, Section 1.A.",
+        "The requested 5 mg starting dose is inconsistent with the policy's recommended 2.5 mg once-weekly initiation dose for a treatment-naive patient.",
+        "The office should correct the initial prescription and prior authorization request to Zepbound 2.5 mg SC once weekly, four single-dose pens per 28 days.",
+        "The 5 mg dose is appropriate for subsequent dose escalation after the initiation period, rather than as the initial requested dose.",
+        "No additional documentation is needed to establish the four initial weight-loss coverage criteria based on the supplied chart.",
+        "The policy specifies an 8-month approval duration for qualifying initial weight-loss therapy."
+      ],
+      "recommended_action": "fix_request"
+    }
+  }
+}

@@ -1,0 +1,324 @@
+{
+  "meta": {
+    "model": "GPT6 Extra (ChatGPT)",
+    "run_date": "2026-11-09",
+    "settings": "new chat per run; memory off; web search off",
+    "change_from_S1": "Chart adds 'Current medications: none.' Nothing else changed."
+  },
+  "outputs": {
+    "S1b run 1": {
+      "product": "Skyrizi (risankizumab-rzaa) 600 mg/10 mL single-dose vial for intravenous infusion",
+      "hcpcs_code": "J2327",
+      "dose": "600 mg IV infusion over at least 1 hour",
+      "frequency": "Weeks 0, 4, and 8 (three induction doses)",
+      "units_per_dose": 600,
+      "quantity_per_fill": "1 vial (600 mg/10 mL) per infusion; 3 vials total for the induction course",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist (Aetna CPB 1009, Section I.C)",
+          "met": "yes",
+          "chart_evidence": "Prescriber is a board-certified gastroenterologist."
+        },
+        {
+          "criterion": "Treatment of moderately to severely active Crohn's disease (Section II.C)",
+          "met": "yes",
+          "chart_evidence": "34-year-old female with moderately to severely active ileocolonic Crohn's disease, diagnosed 03/2024. CDAI 310, 6 to 8 loose stools daily, crampy abdominal pain, 3 kg weight loss over 2 months, deep ulcers in the terminal ileum and ascending colon on 09/2026 colonoscopy, CRP 18 mg/L, and fecal calprotectin 640 mcg/g. GI assessment explicitly documents moderately to severely active disease."
+        },
+        {
+          "criterion": "Evaluation for tuberculosis before initiation of biologic therapy (Section IV)",
+          "met": "yes",
+          "chart_evidence": "QuantiFERON-TB Gold negative on 10/02/2026."
+        },
+        {
+          "criterion": "No concomitant biologic or targeted synthetic drug for the same indication (Section IV)",
+          "met": "yes",
+          "chart_evidence": "Current medications: none. No prior biologic or targeted synthetic drug use. Treatment plan specifies initiation of risankizumab without another biologic or targeted synthetic agent."
+        },
+        {
+          "criterion": "Requested induction dose and schedule consistent with policy (Dosage and Administration)",
+          "met": "yes",
+          "chart_evidence": "Requested Skyrizi 600 mg IV at weeks 0, 4, and 8 matches Aetna's recommended adult Crohn's disease induction regimen. Policy specifies infusion over at least 1 hour."
+        },
+        {
+          "criterion": "Medical-benefit HCPCS code and billing units consistent with policy",
+          "met": "yes",
+          "chart_evidence": "Aetna lists J2327 as injection, risankizumab-rzaa, intravenous, 1 mg. A 600 mg infusion requires 600 HCPCS units. The policy lists a 600 mg/10 mL single-dose IV vial."
+        },
+        {
+          "criterion": "Diagnosis supported by chart and covered ICD-10-CM range",
+          "met": "yes",
+          "chart_evidence": "Ileocolonic Crohn's disease without complications supports K50.80 (Crohn's disease of both small and large intestine without complications), within Aetna's covered K50.00-K50.919 range."
+        },
+        {
+          "criterion": "Prior conventional therapy failure or prior biologic use required for initial Crohn's disease approval",
+          "met": "yes",
+          "chart_evidence": "Aetna Section II.C does not impose a prior-treatment failure or step-therapy requirement for moderately to severely active Crohn's disease. Chart documents inadequate response to mesalamine 4.8 g/day from 11/2025 to 05/2026. No corticosteroid, immunomodulator, or biologic trial is required by the stated initial-approval criterion."
+        },
+        {
+          "criterion": "Baseline liver enzyme and bilirubin evaluation recommended by labeling (policy Background, hepatotoxicity warning; not an explicit initial-approval criterion)",
+          "met": "unclear",
+          "chart_evidence": "No baseline liver enzymes or bilirubin results are documented in the supplied chart. The policy's labeling discussion recommends evaluating these at baseline and monitoring during induction for Crohn's disease."
+        }
+      ],
+      "overall_criteria_status": "met",
+      "missing_or_problems": [
+        "Baseline liver enzyme and bilirubin results are not documented. Obtain or confirm baseline testing before initiating therapy per the labeling precautions described in the payer policy. This is not listed as a separate initial-approval requirement.",
+        "The office draft does not specify HCPCS J2327 or 600 units per dose; include these in the completed medical-benefit authorization or billing fields.",
+        "The office draft does not specify infusion duration; the policy recommends administration over at least 1 hour. Include this in the infusion order.",
+        "No corticosteroid, immunomodulator, or prior biologic failure is documented, but these are not required for initial approval of Crohn's disease under the supplied Aetna policy.",
+        "Subcutaneous maintenance beginning at week 12 is documented in the treatment plan but is outside the scope of this IV induction authorization request."
+      ],
+      "recommended_action": "submit"
+    },
+    "S1b run 2": {
+      "product": "Skyrizi (risankizumab-rzaa) 600 mg/10 mL single-dose vial for intravenous infusion",
+      "hcpcs_code": "J2327",
+      "dose": "600 mg IV per infusion, administered over at least 1 hour",
+      "frequency": "Induction at weeks 0, 4, and 8 (3 total infusions)",
+      "units_per_dose": 600,
+      "quantity_per_fill": "1 vial (600 mg/10 mL) per infusion; 3 vials total for induction",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Diagnosis of moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "GI note dated 10/20/2026 documents moderately to severely active ileocolonic Crohn's disease diagnosed 03/2024. CDAI 310; 6–8 loose stools daily; crampy abdominal pain; 3 kg weight loss over 2 months; deep ulcers in terminal ileum and ascending colon on 09/2026 colonoscopy; CRP 18 mg/L; fecal calprotectin 640 mcg/g."
+        },
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "Prescriber is a board-certified gastroenterologist."
+        },
+        {
+          "criterion": "Tuberculosis evaluation prior to treatment initiation",
+          "met": "yes",
+          "chart_evidence": "QuantiFERON-TB Gold negative on 10/02/2026, before planned initiation of risankizumab."
+        },
+        {
+          "criterion": "No concomitant biologic or targeted synthetic drug for the same indication",
+          "met": "yes",
+          "chart_evidence": "Current medications: none. No prior biologic or targeted synthetic therapy. Treatment plan specifies Skyrizi without concomitant biologic or targeted synthetic therapy."
+        },
+        {
+          "criterion": "Prior treatment failure or step therapy for initial Crohn's disease approval",
+          "met": "yes",
+          "chart_evidence": "Aetna CPB 1009 does not require prior failure of corticosteroids, immunomodulators, or biologics for initial Crohn's disease approval. Chart documents inadequate response to mesalamine 4.8 g/day from 11/2025 to 05/2026. Absence of other prior therapies does not preclude approval under the attached policy."
+        },
+        {
+          "criterion": "Requested induction dose and schedule consistent with policy",
+          "met": "yes",
+          "chart_evidence": "Aetna CPB 1009 specifies 600 mg IV at weeks 0, 4, and 8 for adult Crohn's disease induction. The requested product, dose, route, and schedule match the policy."
+        },
+        {
+          "criterion": "Correct medical-benefit HCPCS code and billing units",
+          "met": "yes",
+          "chart_evidence": "Aetna CPB 1009 lists J2327 for intravenous risankizumab-rzaa, per 1 mg. Each 600 mg infusion corresponds to 600 HCPCS units and one 600 mg/10 mL vial."
+        },
+        {
+          "criterion": "Covered diagnosis",
+          "met": "yes",
+          "chart_evidence": "Crohn's disease involving both small and large intestine without complications is documented. ICD-10-CM K50.80 is within the covered Crohn's disease code range K50.00–K50.919 listed in Aetna CPB 1009."
+        }
+      ],
+      "overall_criteria_status": "met",
+      "missing_or_problems": [
+        "No unmet initial-approval coverage criteria identified.",
+        "Baseline liver enzymes and bilirubin are not documented. The policy's prescribing-information safety precautions recommend baseline evaluation and monitoring during induction. These laboratory results are not listed as separate initial-approval criteria.",
+        "The office's draft does not specify HCPCS code J2327, 600 billing units per infusion, or ICD-10-CM K50.80. These details can be added when completing the authorization without changing the requested drug or dose.",
+        "The planned subcutaneous maintenance phase beginning at week 12 is documented but is outside the scope of this IV induction request."
+      ],
+      "recommended_action": "submit"
+    },
+    "S1b run 3": {
+      "product": "Skyrizi (risankizumab-rzaa), 600 mg/10 mL single-dose vial for intravenous infusion",
+      "hcpcs_code": "J2327",
+      "dose": "600 mg IV infusion over at least 1 hour",
+      "frequency": "Weeks 0, 4, and 8 (every 4 weeks for 3 induction doses)",
+      "units_per_dose": 600,
+      "quantity_per_fill": "1 vial (600 mg/10 mL) per infusion; 3 vials total for the induction course",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Initial approval: Moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "GI clinic note dated 10/20/2026 documents moderately to severely active ileocolonic Crohn's disease diagnosed 03/2024. CDAI 310, 6 to 8 loose stools daily, crampy abdominal pain, 3 kg weight loss over 2 months, deep ulcers in the terminal ileum and ascending colon on 09/2026 colonoscopy, CRP 18 mg/L, and fecal calprotectin 640 mcg/g."
+        },
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "Prescriber is a board-certified gastroenterologist."
+        },
+        {
+          "criterion": "Tuberculosis evaluation prior to treatment initiation",
+          "met": "yes",
+          "chart_evidence": "QuantiFERON-TB Gold negative on 10/02/2026, before planned Skyrizi initiation."
+        },
+        {
+          "criterion": "No concomitant use with another biologic or targeted synthetic drug for the same indication",
+          "met": "unclear",
+          "chart_evidence": "Current medications: none. No prior biologic or targeted synthetic drug exposure. The treatment plan lists Skyrizi induction followed by subcutaneous maintenance, with no concurrent therapy specified. However, the chart does not explicitly attest that another biologic or targeted synthetic drug will not be used concomitantly."
+        },
+        {
+          "criterion": "Appropriate adult Crohn's disease induction dose and schedule",
+          "met": "yes",
+          "chart_evidence": "Patient is 34 years old. Requested Skyrizi 600 mg IV at weeks 0, 4, and 8 matches Aetna CPB 1009 adult Crohn's disease induction dosing. The policy specifies infusion over at least 1 hour. The chart also documents planned subcutaneous maintenance beginning at week 12."
+        },
+        {
+          "criterion": "Prior treatment failure or step therapy for Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Aetna CPB 1009 does not require prior corticosteroid, immunomodulator, biologic, or targeted synthetic therapy failure for initial approval of moderately to severely active Crohn's disease. The chart documents inadequate response to mesalamine 4.8 g/day from 11/2025 through 05/2026. Absence of corticosteroid, immunomodulator, or biologic trials does not violate the stated Crohn's disease approval criteria."
+        },
+        {
+          "criterion": "Medical benefit HCPCS coding",
+          "met": "yes",
+          "chart_evidence": "Aetna CPB 1009 identifies J2327 as injection, risankizumab-rzaa, intravenous, 1 mg. A 600 mg infusion requires 600 HCPCS billing units."
+        },
+        {
+          "criterion": "Diagnosis consistent with policy-covered ICD-10-CM codes",
+          "met": "yes",
+          "chart_evidence": "Documented Crohn's disease involving the small and large intestine without complications supports ICD-10-CM K50.80. This falls within the policy's covered K50.00 through K50.919 code range."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "Obtain prescriber confirmation that Skyrizi will not be administered concomitantly with another biologic or targeted synthetic drug for Crohn's disease. Current medications are documented as none, but an explicit prospective attestation is absent.",
+        "Baseline liver enzymes and bilirubin are not documented. The policy's safety information recommends baseline assessment and monitoring during induction through at least week 12. This is not explicitly listed as an initial-approval criterion.",
+        "No product, induction dose, frequency, or HCPCS coding correction is indicated. The drafted request should include ICD-10-CM K50.80 and 600 units of J2327 per infusion when submitted."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "S1b run 4": {
+      "product": "Skyrizi (risankizumab-rzaa) 600 mg/10 mL single-dose vial for IV infusion",
+      "hcpcs_code": "J2327",
+      "dose": "600 mg IV infused over at least 1 hour",
+      "frequency": "At weeks 0, 4, and 8 (3 induction doses)",
+      "units_per_dose": 600,
+      "quantity_per_fill": "1 vial (600 mg/10 mL) per infusion; 3 vials total for induction",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist (Policy I.C)",
+          "met": "yes",
+          "chart_evidence": "Prescriber is a board-certified gastroenterologist."
+        },
+        {
+          "criterion": "Initial treatment of moderately to severely active Crohn's disease (Policy II.C)",
+          "met": "yes",
+          "chart_evidence": "34-year-old female with moderately to severely active ileocolonic Crohn's disease. CDAI 310; 6 to 8 loose stools daily; crampy abdominal pain; 3 kg weight loss over 2 months. September 2026 colonoscopy showed deep ulcers in the terminal ileum and ascending colon. CRP 18 mg/L and fecal calprotectin 640 mcg/g. Diagnosis established March 2024."
+        },
+        {
+          "criterion": "Tuberculosis evaluation before biologic treatment (Policy IV)",
+          "met": "yes",
+          "chart_evidence": "QuantiFERON-TB Gold negative on 10/02/2026, before planned Skyrizi initiation."
+        },
+        {
+          "criterion": "No concomitant biologic or targeted synthetic drug for the same indication (Policy IV)",
+          "met": "yes",
+          "chart_evidence": "Current medications: none. No prior biologic or targeted synthetic drug. Treatment plan specifies Skyrizi without another concomitant biologic or targeted synthetic drug."
+        },
+        {
+          "criterion": "Recommended adult Crohn's disease IV induction regimen (Policy Dosage and Administration)",
+          "met": "yes",
+          "chart_evidence": "Office requests Skyrizi 600 mg IV at weeks 0, 4, and 8, matching the policy's recommended induction regimen. The chart documents subsequent subcutaneous maintenance beginning at week 12."
+        },
+        {
+          "criterion": "Covered HCPCS code and billing units",
+          "met": "yes",
+          "chart_evidence": "Policy lists J2327 for intravenous risankizumab-rzaa, per 1 mg. A 600 mg IV dose corresponds to 600 HCPCS units. The policy lists a 600 mg/10 mL single-dose IV vial."
+        },
+        {
+          "criterion": "Covered ICD-10 diagnosis",
+          "met": "yes",
+          "chart_evidence": "K50.80 represents Crohn's disease of both small and large intestine without complications, consistent with the documented ileocolonic Crohn's disease without complications. It falls within the policy's covered K50.00-K50.919 range."
+        },
+        {
+          "criterion": "Prior corticosteroid, immunomodulator, or biologic failure",
+          "met": "yes",
+          "chart_evidence": "Aetna Policy II.C does not require prior failure of corticosteroids, immunomodulators, or biologics for initial approval of moderately to severely active Crohn's disease. Chart documents inadequate response to mesalamine 4.8 g/day from 11/2025 to 05/2026. No other prior therapies are documented."
+        }
+      ],
+      "overall_criteria_status": "met",
+      "missing_or_problems": [
+        "Baseline liver enzymes and bilirubin are not documented. The policy's labeling precautions recommend evaluating these before starting Skyrizi for Crohn's disease and monitoring during induction. This is not listed as a separate initial authorization criterion.",
+        "The chart documents no current medications and a plan for Skyrizi alone, but does not contain an explicit prospective attestation against future concomitant biologic or targeted synthetic therapy. The policy does not specify a separate attestation form for this criterion.",
+        "The subcutaneous maintenance dose is not specified in the chart. This does not prevent submission of the IV induction request; maintenance requires separate dosing clarification."
+      ],
+      "recommended_action": "submit"
+    },
+    "S1b run 5": {
+      "product": "Skyrizi (risankizumab-rzaa) 600 mg/10 mL single-dose vial for intravenous infusion",
+      "hcpcs_code": "J2327",
+      "dose": "600 mg IV infused over at least 1 hour",
+      "frequency": "Every 4 weeks for 3 induction doses at weeks 0, 4, and 8",
+      "units_per_dose": 600,
+      "quantity_per_fill": "1 vial (600 mg/10 mL) per infusion; 3 vials total for induction",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Commercial medical benefit and intravenous precertification requirement",
+          "met": "yes",
+          "chart_evidence": "Commercial Aetna plan; medical benefit; IV induction requested. Aetna CPB 1009 requires precertification for intravenous Skyrizi."
+        },
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "Prescriber is a board-certified gastroenterologist, satisfying Aetna CPB 1009 Section I.C."
+        },
+        {
+          "criterion": "Moderately to severely active Crohn's disease for initial approval",
+          "met": "yes",
+          "chart_evidence": "34-year-old female with ileocolonic Crohn's disease diagnosed 03/2024. GI assessment dated 10/20/2026 confirms moderately to severely active disease. CDAI 310; 6 to 8 loose stools daily; crampy abdominal pain; 3 kg weight loss over 2 months. Colonoscopy 09/2026 demonstrates deep ulcers in the terminal ileum and ascending colon. CRP 18 mg/L and fecal calprotectin 640 mcg/g. Meets Aetna CPB 1009 Section II.C."
+        },
+        {
+          "criterion": "Prior corticosteroid, immunomodulator, or biologic treatment failure",
+          "met": "yes",
+          "chart_evidence": "Aetna CPB 1009 Section II.C does not require prior corticosteroid, immunomodulator, biologic, or targeted synthetic drug failure for initial Crohn's disease approval. Chart documents inadequate response to mesalamine 4.8 g/day for 6 months (11/2025 to 05/2026), with no corticosteroid, immunomodulator, biologic, or targeted synthetic drug exposure. Absence of these prior therapies does not prevent approval under the supplied policy."
+        },
+        {
+          "criterion": "Tuberculosis evaluation before treatment initiation",
+          "met": "yes",
+          "chart_evidence": "QuantiFERON-TB Gold negative on 10/02/2026, before planned Skyrizi initiation. Meets Aetna CPB 1009 Section IV tuberculosis evaluation requirement."
+        },
+        {
+          "criterion": "No concomitant biologic or targeted synthetic drug for the same indication",
+          "met": "unclear",
+          "chart_evidence": "Chart lists no current medications and no prior biologic or targeted synthetic drug use. However, it does not explicitly document that the patient will not receive another biologic or targeted synthetic drug concurrently with Skyrizi for Crohn's disease, as required by Aetna CPB 1009 Section IV."
+        },
+        {
+          "criterion": "Appropriate intravenous induction dose and schedule for adult Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Prescriber requests Skyrizi 600 mg IV at weeks 0, 4, and 8, matching the adult Crohn's disease induction regimen in Aetna CPB 1009. The policy specifies infusion over at least 1 hour."
+        },
+        {
+          "criterion": "Appropriate medical benefit HCPCS coding and billable units",
+          "met": "yes",
+          "chart_evidence": "Aetna CPB 1009 identifies J2327 as intravenous risankizumab-rzaa, per 1 mg. A 600 mg infusion equals 600 HCPCS units. One 600 mg/10 mL single-dose vial is required per infusion."
+        },
+        {
+          "criterion": "Appropriate diagnosis coding",
+          "met": "yes",
+          "chart_evidence": "Documented Crohn's disease involves both small and large intestine without complications. ICD-10-CM K50.80 is appropriate and falls within the K50.00-K50.919 range included in Aetna CPB 1009."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "Obtain explicit prescriber confirmation that Skyrizi will not be used concomitantly with another biologic or targeted synthetic drug for Crohn's disease. The current medication list supports no existing concurrent therapy but does not establish future nonconcurrent use.",
+        "Baseline liver enzymes and bilirubin are not documented. Aetna CPB 1009 includes prescribing-information precautions recommending evaluation before treatment and monitoring during induction through at least week 12. These laboratory assessments are safety precautions, not separately listed initial approval criteria.",
+        "The office's drafted request does not specify HCPCS J2327 or 600 units per infusion. Add these billing details to the completed submission. The requested product, dose, and induction schedule are otherwise correct.",
+        "The absence of prior corticosteroid, immunomodulator, or biologic therapy is not a coverage deficiency under the supplied Aetna Crohn's disease initial approval criteria."
+      ],
+      "recommended_action": "pend_for_info"
+    }
+  }
+}

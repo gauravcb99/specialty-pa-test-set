@@ -1,0 +1,20 @@
+setup,case,runs,actions,matches_original_key,matches_widened_key
+clean,S1,5,pend_for_info 5,0/5,5/5
+clean,S1b,5,submit 3; pend_for_info 2,3/5,5/5
+clean,S2,5,pend_for_info 5,5/5,5/5
+clean,S3,1,pend_for_info 1,1/1,1/1
+clean,I1,1,submit 1,1/1,1/1
+clean,I2,5,pend_for_info 5,5/5,5/5
+clean,I3,1,fix_request 1,1/1,1/1
+clean,Z1,1,submit 1,1/1,1/1
+clean,Z2,1,pend_for_info 1,1/1,1/1
+clean,Z3,1,fix_request 1,1/1,1/1
+history on,S1,6,pend_for_info 6,0/6,6/6
+history on,S2,1,pend_for_info 1,1/1,1/1
+history on,S3,2,pend_for_info 2,2/2,2/2
+history on,I1,2,submit 2,2/2,2/2
+history on,I2,6,pend_for_info 6,6/6,6/6
+history on,I3,2,fix_request 2,2/2,2/2
+history on,Z1,1,submit 1,1/1,1/1
+history on,Z2,1,pend_for_info 1,1/1,1/1
+history on,Z3,1,fix_request 1,1/1,1/1

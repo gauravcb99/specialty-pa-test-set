@@ -1,0 +1,14 @@
+{
+  "meta": {"reviewer": "Gaurav Bhatti", "test_set_version": "0.1.2", "note": "Clean run baseline (chat history and memory off)."},
+  "cases": {
+    "S1": {"key_problem_found": null, "designed_trap_avoided": true, "false_alarms": [], "test_set_issues": [], "notes": ["Pended for the no-combination attestation (judgment call, accepted by key v0.1.2). Also noted liver enzymes (labeled not a criterion) and infusion time."]},
+    "S2": {"key_problem_found": true, "designed_trap_avoided": true, "false_alarms": [], "test_set_issues": [], "notes": ["No-combination rule marked met (same chart as S1)."]},
+    "S3": {"key_problem_found": true, "designed_trap_avoided": true, "false_alarms": [], "test_set_issues": [], "notes": ["Concurrent-use status flagged as not documented; chart lists only Skyrizi history. Judgment call, no action change."]},
+    "I1": {"key_problem_found": null, "designed_trap_avoided": true, "false_alarms": [], "test_set_issues": [], "notes": []},
+    "I2": {"key_problem_found": true, "designed_trap_avoided": true, "false_alarms": [], "test_set_issues": [], "notes": ["K50.111 now that the chart states rectal bleeding."]},
+    "I3": {"key_problem_found": true, "designed_trap_avoided": true, "false_alarms": [], "test_set_issues": [], "notes": ["Product field now names Inflectra as the preferred alternative, Q5103."]},
+    "Z1": {"key_problem_found": null, "designed_trap_avoided": true, "false_alarms": [], "test_set_issues": [], "notes": []},
+    "Z2": {"key_problem_found": true, "designed_trap_avoided": true, "false_alarms": [], "test_set_issues": [], "notes": ["Flagged the Brand Mounjaro quantity limit table again. Asked for diet and activity confirmation (defensible)."]},
+    "Z3": {"key_problem_found": true, "designed_trap_avoided": true, "false_alarms": [], "test_set_issues": [], "notes": []}
+  }
+}

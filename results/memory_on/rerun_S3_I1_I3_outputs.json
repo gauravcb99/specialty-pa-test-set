@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "model": "GPT6 Extra (ChatGPT)",
+    "run_date": "2026-11-09",
+    "settings": "new chat per case, policy attached, web search off, memory and custom instructions off",
+    "runs_per_case": 1
+  },
+  "outputs": {
+    "S3": {
+      "product": "Skyrizi (risankizumab-rzaa) 360 mg subcutaneous single-dose prefilled cartridge for on-body injector",
+      "hcpcs_code": "N/A (pharmacy benefit)",
+      "dose": "360 mg SC",
+      "frequency": "Every 8 weeks",
+      "units_per_dose": null,
+      "quantity_per_fill": "1 single-dose 360 mg cartridge per 56 days",
+      "diagnosis_codes": [
+        "K50.80"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Covered indication: moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "GI note dated 10/22/2026 documents moderately to severely active ileocolonic Crohn's disease without complications, CDAI 280, CRP 12 mg/L, 5 loose stools daily, and abdominal pain."
+        },
+        {
+          "criterion": "Appropriate authorization pathway: initial therapy versus continuation (IP0670, Section 1)",
+          "met": "no",
+          "chart_evidence": "The office requested continuation of therapy, but Skyrizi was discontinued in 02/2026 after insurance coverage lapsed. The patient is restarting treatment in 10/2026. Cigna explicitly requires patients restarting Skyrizi to be reviewed under Initial Therapy criterion A, regardless of prior treatment duration or response."
+        },
+        {
+          "criterion": "Initial therapy: patient is older than 18 years",
+          "met": "yes",
+          "chart_evidence": "Patient is 34 years old."
+        },
+        {
+          "criterion": "Initial therapy: according to the prescriber, patient will receive Skyrizi IV induction dosing within 3 months of initiating subcutaneous therapy",
+          "met": "unclear",
+          "chart_evidence": "The chart documents prior Skyrizi IV induction from 01/2025 through 03/2025 but does not document planned IV induction for the 2026 restart. The current plan specifies only Skyrizi 360 mg SC every 8 weeks. Prior induction does not establish that the induction requirement for the restart will be met."
+        },
+        {
+          "criterion": "Initial therapy: prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "The prescribing clinician is a gastroenterologist."
+        },
+        {
+          "criterion": "Continuation therapy: patient is currently receiving Skyrizi SC and established on therapy for at least 6 months",
+          "met": "no",
+          "chart_evidence": "The patient previously received Skyrizi SC from 04/2025 through 02/2026, but treatment stopped in 02/2026. The patient is not currently receiving Skyrizi. The policy explicitly directs restarting patients to Initial Therapy criterion A."
+        },
+        {
+          "criterion": "Continuation therapy: beneficial clinical response to prior Skyrizi",
+          "met": "unclear",
+          "chart_evidence": "The chart documents clinical remission with CDAI below 150 during prior Skyrizi treatment, supporting historical benefit. However, pretreatment baseline objective measures or symptom values are not provided for the formal baseline comparison specified in continuation criterion B. In any event, this criterion cannot substitute for initial therapy requirements when restarting treatment."
+        },
+        {
+          "criterion": "No concurrent use with another biologic or targeted synthetic oral small molecule drug for an inflammatory condition",
+          "met": "unclear",
+          "chart_evidence": "No concurrent medication list or specific attestation regarding other biologic or targeted synthetic therapy is provided."
+        }
+      ],
+      "overall_criteria_status": "unclear",
+      "missing_or_problems": [
+        "The request is incorrectly characterized as continuation therapy. Cigna policy IP0670, Section 1.B.i, explicitly states that patients restarting Skyrizi are reviewed under Initial Therapy criterion A.",
+        "The required prescriber confirmation of Skyrizi IV induction within 3 months of initiating subcutaneous therapy is missing.",
+        "The prior IV induction completed in 03/2025 does not establish compliance with the induction requirement for the 2026 restart.",
+        "The documented plan includes only 360 mg SC every 8 weeks. Clarification is required regarding whether IV induction is planned before the requested maintenance treatment.",
+        "Prior clinical remission supports the rationale for restarting Skyrizi but does not override the policy's initial therapy requirements.",
+        "Concurrent use of another biologic or targeted synthetic oral small molecule drug cannot be assessed from the supplied chart."
+      ],
+      "recommended_action": "pend_for_info"
+    },
+    "I1": {
+      "product": "Inflectra (infliximab-dyyb)",
+      "hcpcs_code": "Q5103",
+      "dose": "5 mg/kg = 400 mg IV (80 kg × 5 mg/kg)",
+      "frequency": "Induction at weeks 0, 2, and 6; maintenance every 8 weeks thereafter",
+      "units_per_dose": 40,
+      "quantity_per_fill": "400 mg per infusion (40 HCPCS units of 10 mg each)",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Preferred infliximab product for Medical Necessity Plans",
+          "met": "yes",
+          "chart_evidence": "Inflectra (infliximab-dyyb) is a preferred product under the UnitedHealthcare policy, effective 02/01/2026. The requested product is Inflectra."
+        },
+        {
+          "criterion": "Diagnosis of moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "GI note dated 10/15/2026 documents moderately to severely active ileal Crohn's disease. CDAI 290, 6 stools/day, abdominal pain, CRP 22 mg/L, and MR enterography showing 25 cm of active terminal ileal inflammation. No complications documented. ICD-10-CM K50.00."
+        },
+        {
+          "criterion": "At least one qualifying pathway: high-risk disease, failure of conventional therapy, prior targeted immunomodulator, or current infliximab treatment",
+          "met": "yes",
+          "chart_evidence": "Conventional therapy failure pathway is satisfied. Prednisone 40 mg taper over 8 weeks (03/2025–05/2025) resulted in flare at completion. Azathioprine 200 mg/day (2.5 mg/kg) since 01/2026, with persistent moderate-to-severe disease activity after 9 months. Both corticosteroids and azathioprine are listed qualifying conventional therapies. No prior biologic or targeted synthetic therapy is required when this pathway is satisfied."
+        },
+        {
+          "criterion": "Infliximab dosing according to FDA-labeled dosing for Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Prescriber orders Inflectra 5 mg/kg IV at weeks 0, 2, and 6, then every 8 weeks. At 80 kg, the calculated dose is 400 mg. The regimen is consistent with standard labeled Crohn's disease induction and maintenance dosing."
+        },
+        {
+          "criterion": "Not receiving infliximab in combination with another systemic targeted immunomodulator for the same indication",
+          "met": "yes",
+          "chart_evidence": "Chart states no prior biologic or targeted synthetic drug. Planned concomitant medication is azathioprine, a conventional immunosuppressant rather than one of the prohibited systemic targeted immunomodulators identified in the policy. No concurrent targeted immunomodulator is documented."
+        },
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "The 10/15/2026 GI clinic note identifies the prescriber as a gastroenterologist."
+        },
+        {
+          "criterion": "Initial authorization for no more than 12 months",
+          "met": "yes",
+          "chart_evidence": "This is an initial therapy request. The office has not requested an authorization period exceeding 12 months. Any initial approval must be limited to no more than 12 months under the policy."
+        }
+      ],
+      "overall_criteria_status": "met",
+      "missing_or_problems": [],
+      "recommended_action": "submit"
+    },
+    "I3": {
+      "product": "Remicade (infliximab) — requested product; non-preferred under UnitedHealthcare Medical Necessity Plan. Recommend changing to preferred Inflectra (infliximab-dyyb) or Avsola (infliximab-axxq).",
+      "hcpcs_code": "J1745 (Remicade, 10 mg per unit); change to Q5103 for Inflectra or Q5121 for Avsola, 10 mg per unit",
+      "dose": "5 mg/kg IV = 400 mg per infusion (80 kg × 5 mg/kg)",
+      "frequency": "Weeks 0, 2, and 6 for induction, then every 8 weeks for maintenance",
+      "units_per_dose": 40,
+      "quantity_per_fill": "400 mg per infusion (40 HCPCS units); 3 induction infusions followed by maintenance infusions every 8 weeks",
+      "diagnosis_codes": [
+        "K50.00"
+      ],
+      "criteria_review": [
+        {
+          "criterion": "Diagnosis of moderately to severely active Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "GI note dated 10/15/2026 documents moderately to severely active ileal Crohn's disease diagnosed 06/2023. CDAI 290, 6 stools per day, abdominal pain, CRP 22 mg/L, and MR enterography 09/2026 showing 25 cm of active terminal ileal inflammation without stricture or fistula."
+        },
+        {
+          "criterion": "History of failure of at least one conventional therapy at up to maximally indicated doses, unless contraindicated or significant adverse effects occurred",
+          "met": "yes",
+          "chart_evidence": "Prednisone 40 mg taper over 8 weeks from 03/2025 through 05/2025, with flare at the end of the taper. Azathioprine 200 mg daily (2.5 mg/kg; normal TPMT activity) since 01/2026, with persistent clinically and radiographically active disease after 9 months. Both corticosteroid and azathioprine treatment failures are documented."
+        },
+        {
+          "criterion": "Infliximab dosed according to FDA-labeled dosing for Crohn's disease",
+          "met": "yes",
+          "chart_evidence": "Prescribed infliximab 5 mg/kg IV at weeks 0, 2, and 6, followed by every 8 weeks. At 80 kg, the calculated dose is 400 mg per infusion, consistent with standard labeled Crohn's disease dosing."
+        },
+        {
+          "criterion": "Not receiving infliximab concurrently with another systemic targeted immunomodulator for the same indication",
+          "met": "yes",
+          "chart_evidence": "Chart documents no prior biologic or targeted synthetic drug. Planned concomitant azathioprine is a conventional immunosuppressant, not one of the systemic targeted immunomodulators prohibited by this criterion."
+        },
+        {
+          "criterion": "Prescribed by or in consultation with a gastroenterologist",
+          "met": "yes",
+          "chart_evidence": "Prescriber is a gastroenterologist."
+        },
+        {
+          "criterion": "Initial authorization limited to no more than 12 months",
+          "met": "unclear",
+          "chart_evidence": "This is an initial infliximab request, but the office's draft does not specify the requested authorization duration. Any initial authorization must be limited to no more than 12 months."
+        },
+        {
+          "criterion": "Preferred product requirement for Medical Necessity Plans",
+          "met": "no",
+          "chart_evidence": "The requested Remicade is non-preferred. UnitedHealthcare policy identifies Inflectra and Avsola as preferred infliximab products for Medical Necessity Plans. The request does not meet the additional requirements for a non-preferred product."
+        },
+        {
+          "criterion": "Non-preferred product exception: at least 14-week trial of Inflectra or Avsola with minimal response and residual disease activity, plus physician attestation of expected superior response to Remicade",
+          "met": "no",
+          "chart_evidence": "No prior biologic therapy is documented. There has been no 14-week trial of Inflectra or Avsola, and no physician attestation that Remicade would provide a superior clinical response."
+        },
+        {
+          "criterion": "Alternative non-preferred product exception: intolerance, contraindication, or adverse event to Inflectra or Avsola, plus physician attestation that the event would not be expected with Remicade",
+          "met": "no",
+          "chart_evidence": "No prior biologic exposure, intolerance, contraindication, or adverse event involving Inflectra or Avsola is documented. The required physician attestation is also absent."
+        },
+        {
+          "criterion": "No loss of favorable response after established maintenance therapy with Inflectra, Avsola, or another infliximab biosimilar",
+          "met": "yes",
+          "chart_evidence": "The patient has never received a biologic or targeted synthetic drug and has no history of infliximab maintenance therapy or loss of response."
+        }
+      ],
+      "overall_criteria_status": "not_met",
+      "missing_or_problems": [
+        "The Remicade request as drafted does not satisfy the Medical Necessity Plan's non-preferred product criteria, despite meeting the substantive clinical criteria for initial infliximab treatment of Crohn's disease.",
+        "There is no documented trial of at least 14 weeks of Inflectra or Avsola resulting in minimal clinical response with residual disease activity, and no required physician attestation of expected superior response to Remicade.",
+        "There is no documented intolerance, contraindication, or adverse event involving Inflectra or Avsola, and no required physician attestation supporting an exception on that basis.",
+        "Change the requested product to preferred Inflectra (infliximab-dyyb), HCPCS Q5103, or preferred Avsola (infliximab-axxq), HCPCS Q5121, following prescriber approval of the product change. The prescribed 400 mg dose and induction/maintenance schedule can remain unchanged.",
+        "The draft lacks an explicit ICD-10-CM diagnosis code. Add K50.00 (Crohn's disease of small intestine without complications), which is supported by the chart and listed in the policy.",
+        "Specify an initial authorization period of no more than 12 months.",
+        "Negative QuantiFERON-TB Gold dated 10/01/2026 is documented. No additional TB screening documentation gap is identified from the supplied chart and policy."
+      ],
+      "recommended_action": "fix_request"
+    }
+  }
+}
