@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "name": "Medicare GLP-1 Bridge routing set",
+    "version": "0.1.1",
+    "date": "2026-11-10",
+    "author": "Gaurav Bhatti",
+    "note": "Nine synthetic Medicare charts. Each has one right route: the Medicare GLP-1 Bridge, the patient's Part D plan, or neither, plus the action before anything is submitted. All patients are synthetic.",
+    "sources": {
+      "CMS_PROVIDERS_REFERENCE_ONLY": "https://www.cms.gov/medicare/coverage/prescription-drug-coverage/medicare-glp-1-bridge/information-providers (last modified 08/06/2026)",
+      "CMS_PRESCRIBER_SHEET": "https://www.cms.gov/files/document/glp-1-prescribers-c-1.pdf (CMS Product No. 12235, June 2026)",
+      "CMS_PA_FORM": "https://www.cms.gov/files/document/glp-1-bridge.pdf",
+      "CMS_PARTD_FAQ": "https://www.cms.gov/files/document/medicare-glp-1-bridge-expectations-faqs.pdf (memo dated 06/10/2026)",
+      "MEDICARE_GOV": "https://www.medicare.gov/coverage/weight-loss-drugs"
+    },
+    "rules_used": [
+      "Program July 1, 2026 to December 31, 2027; $50 copay.",
+      "Prescribed to reduce excess body weight and maintain weight reduction with lifestyle modification; age 18+.",
+      "At GLP-1 initiation: BMI >=35; or BMI >=30 with HFpEF, uncontrolled hypertension (SBP >140 or DBP >90 despite two concurrent antihypertensives) or CKD stage 3a+; or BMI >=27 with prediabetes (ADA), previous MI, previous stroke or symptomatic PAD.",
+      "Type 2 diabetes, moderate-to-severe OSA and noncirrhotic MASH with moderate to advanced fibrosis (F2-F3) are Part D-covered indications; these patients are ineligible for the Bridge even if they meet the BMI criteria. A Bridge PA with a Part D-coverable diagnosis will be denied.",
+      "A GLP-1 prescribed in order to reduce MACE risk goes to the Part D plan; the PA doesn't require attesting to the absence of established CVD.",
+      "Beneficiaries currently receiving a GLP-1 through Part D, or who received one through Part D in CY 2026, are excluded, even for a different GLP-1 for weight management.",
+      "Covered: Foundayo (all), Wegovy injection and tablets, Zepbound KwikPen only. Single-dose Zepbound vials and pens are not covered.",
+      "Eligible plan types include standalone PDPs and MA-PD coordinated care plans."
+    ],
+    "changelog": [
+      "0.1.1 (Nov 10, 2026, after run 1): added G1b, a variant of G1 with the E66 code and SEND TO BRIDGE note on the prescription. No answer keys changed."
+    ]
+  },
+  "cases": [
+    {
+      "id": "G1",
+      "group": "bridge",
+      "case_type": "clean",
+      "plan": "Standalone Part D plan (PDP) with Original Medicare.",
+      "chart": "Primary care note, 11/04/2026. Synthetic patient AL, 68-year-old female. Weight 98 kg, height 164 cm, BMI 36.4. Weight has been above 95 kg for 4 years. BP 128/78 on lisinopril 10 mg. A1c 5.4% (10/2026). No diagnosis of diabetes, sleep apnea or liver disease. No history of heart attack, stroke or peripheral artery disease. eGFR 81. Has never taken a GLP-1 medicine. Enrolled in the clinic's structured nutrition program since 08/2026 and walks 30 minutes 5 days a week. Plan: start tirzepatide for weight reduction alongside the nutrition and activity program.",
+      "prescription_as_drafted": "Zepbound KwikPen 2.5 mg, inject 2.5 mg subcutaneously once weekly. Dispense 1 pen (4 doses, 28 days).",
+      "answer_key": {
+        "route": "bridge",
+        "qualifying_basis": "BMI >=35 at initiation",
+        "part_d_indications_found": [],
+        "product_covered_on_route": "yes",
+        "action": "submit_bridge_pa",
+        "action_also_accepted": []
+      },
+      "what_it_tests": "Baseline. Every element is documented.",
+      "rationale": "BMI 36.4 meets the BMI >=35 tier alone. No Part D-covered indication. Zepbound KwikPen is a covered product. Weight reduction with lifestyle modification is documented."
+    },
+    {
+      "id": "G2",
+      "group": "stop",
+      "case_type": "trap",
+      "plan": "Medicare Advantage HMO with Part D (MA-PD).",
+      "chart": "Primary care note, 11/05/2026. Synthetic patient BR, 70-year-old male. Weight 112 kg, height 177 cm, BMI 35.7. BP 132/80 on losartan 50 mg. A1c 5.5%. No diabetes, no sleep apnea, no liver disease, no cardiovascular events. Has never taken a GLP-1 medicine. Seeing the clinic dietitian monthly and doing supervised exercise twice a week. Plan: start tirzepatide for weight reduction with diet and exercise.",
+      "prescription_as_drafted": "Zepbound 2.5 mg/0.5 mL single-dose pen, inject 2.5 mg subcutaneously once weekly. Dispense 4 pens (28 days).",
+      "answer_key": {
+        "route": "bridge",
+        "qualifying_basis": "BMI >=35 at initiation",
+        "part_d_indications_found": [],
+        "product_covered_on_route": "no",
+        "action": "fix_request",
+        "action_also_accepted": [],
+        "fix": "Change to Zepbound KwikPen 2.5 mg (4-dose pen). The Bridge covers the KwikPen only, not single-dose pens or vials."
+      },
+      "what_it_tests": "Patient qualifies, product doesn't.",
+      "rationale": "Eligible on BMI 35.7. CMS lists Zepbound KwikPen only; single-dose vials and pens are not covered, so the drafted prescription would not be covered."
+    },
+    {
+      "id": "G3",
+      "group": "bridge",
+      "case_type": "trap",
+      "plan": "Standalone Part D plan (PDP) with Original Medicare.",
+      "chart": "Primary care note, 11/03/2026. Synthetic patient CM, 66-year-old female. Weight 84 kg, height 164 cm, BMI 31.2. BP 152/94 today and 148/92 on 10/06/2026, on lisinopril 40 mg and amlodipine 10 mg daily, taken as prescribed. Home sleep test 05/2025: AHI 9 events per hour, mild obstructive sleep apnea; no CPAP prescribed. A1c 5.5%. eGFR 74. No heart failure, MI, stroke or peripheral artery disease. No liver disease. Has never taken a GLP-1 medicine. Working with a dietitian and in a walking program. Plan: start semaglutide for weight reduction with lifestyle changes.",
+      "prescription_as_drafted": "Wegovy 0.25 mg subcutaneously once weekly for 4 weeks, then titrate per label. Dispense 1 month supply.",
+      "answer_key": {
+        "route": "bridge",
+        "qualifying_basis": "BMI >=30 with uncontrolled hypertension despite two antihypertensives",
+        "part_d_indications_found": [],
+        "product_covered_on_route": "yes",
+        "action": "submit_bridge_pa",
+        "action_also_accepted": []
+      },
+      "what_it_tests": "Mild sleep apnea doesn't send the case to Part D. Only moderate to severe OSA does.",
+      "rationale": "BMI 31.2 with SBP >140 and DBP >90 on two concurrent antihypertensives meets the BMI >=30 tier. The Part D-covered OSA indication is moderate to severe; AHI 9 is mild."
+    },
+    {
+      "id": "G4",
+      "group": "part_d",
+      "case_type": "clean",
+      "plan": "Standalone Part D plan (PDP) with Original Medicare.",
+      "chart": "Sleep and primary care note, 11/02/2026. Synthetic patient DK, 67-year-old male. Weight 105 kg, height 176 cm, BMI 33.9. In-lab polysomnography 03/2026: AHI 24 events per hour, moderate obstructive sleep apnea; uses CPAP nightly. BP 134/82 on one medicine. A1c 5.6%. No diabetes, no liver disease, no cardiovascular events. Has never taken a GLP-1 medicine. Plan: start tirzepatide for weight loss and his sleep apnea, with diet and exercise.",
+      "prescription_as_drafted": "Zepbound KwikPen 2.5 mg, inject 2.5 mg subcutaneously once weekly. Dispense 1 pen (4 doses, 28 days).",
+      "answer_key": {
+        "route": "part_d_plan",
+        "qualifying_basis": "",
+        "part_d_indications_found": [
+          "moderate to severe obstructive sleep apnea"
+        ],
+        "product_covered_on_route": "n/a",
+        "action": "send_to_part_d_plan",
+        "action_also_accepted": []
+      },
+      "what_it_tests": "A Part D-covered indication sends the case to the plan, not the Bridge.",
+      "rationale": "Moderate OSA (AHI 24) is a Part D-covered indication; patients with it are ineligible for the Bridge even if they meet the BMI criteria, and a Bridge PA with a Part D-coverable diagnosis will be denied."
+    },
+    {
+      "id": "G5",
+      "group": "stop",
+      "case_type": "gap",
+      "plan": "Medicare Advantage PPO with Part D (MA-PD).",
+      "chart": "Cardiology note, 11/06/2026. Synthetic patient EV, 72-year-old male. Weight 88 kg, height 175.5 cm, BMI 28.6. Anterior myocardial infarction 04/2023 treated with a stent; on aspirin, atorvastatin 80 mg and metoprolol. BP 126/76. A1c 5.6%. No diabetes, no sleep apnea, no liver disease. Has never taken a GLP-1 medicine. Has been following a cardiac rehab diet and exercise plan. Assessment: CAD s/p MI; overweight. Plan: discussed semaglutide. Start Wegovy.",
+      "prescription_as_drafted": "Wegovy 0.25 mg subcutaneously once weekly for 4 weeks, then titrate per label. Dispense 1 month supply.",
+      "answer_key": {
+        "route": "unclear",
+        "qualifying_basis": "BMI >=27 with previous MI, if prescribed for weight reduction",
+        "part_d_indications_found": [
+          "possible: MACE risk reduction in established cardiovascular disease, if that is the purpose"
+        ],
+        "product_covered_on_route": "yes",
+        "action": "pend_for_info",
+        "action_also_accepted": [],
+        "fix": "Ask the prescriber why Wegovy is prescribed. For weight reduction: Bridge (BMI >=27 with previous MI). To reduce cardiovascular risk: Part D plan."
+      },
+      "what_it_tests": "The same chart routes two ways, and only the prescriber's stated purpose decides it.",
+      "rationale": "Previous MI qualifies at BMI >=27 for the Bridge. CMS says a GLP-1 prescribed in order to reduce MACE risk goes to the Part D plan, and Wegovy's cardiovascular indication is Part D-coverable. The note doesn't say which purpose applies."
+    },
+    {
+      "id": "G6",
+      "group": "stop",
+      "case_type": "trap",
+      "plan": "Standalone Part D plan (PDP) with Original Medicare.",
+      "chart": "Primary care note, 11/04/2026. Synthetic patient FN, 69-year-old female. Weight 86 kg, height 164 cm, BMI 32.0. BP 150/92 today and 146/94 on 10/02/2026, on lisinopril 20 mg daily, her only blood pressure medicine. A1c 5.4%. eGFR 72. No heart failure, MI, stroke or peripheral artery disease. No sleep apnea, no liver disease. Has never taken a GLP-1 medicine. In a structured nutrition program. Plan: start tirzepatide for weight reduction; increase lisinopril to 40 mg.",
+      "prescription_as_drafted": "Zepbound KwikPen 2.5 mg, inject 2.5 mg subcutaneously once weekly. Dispense 1 pen (4 doses, 28 days).",
+      "answer_key": {
+        "route": "not_eligible",
+        "qualifying_basis": "",
+        "part_d_indications_found": [],
+        "product_covered_on_route": "n/a",
+        "action": "do_not_submit",
+        "action_also_accepted": [
+          "pend_for_info"
+        ]
+      },
+      "what_it_tests": "Uncontrolled hypertension has a definition: two concurrent antihypertensives.",
+      "rationale": "BMI 32.0 needs HFpEF, uncontrolled hypertension or CKD 3a+. Her BP is high on one medicine; CMS defines uncontrolled hypertension as SBP >140 or DBP >90 despite two concurrent antihypertensives. eGFR 72 isn't CKD 3a. As documented, she doesn't qualify. Pend is accepted if the model asks to confirm medications, since the chart states lisinopril is her only one."
+    },
+    {
+      "id": "G7",
+      "group": "bridge",
+      "case_type": "trap",
+      "plan": "Standalone Part D plan (PDP) with Original Medicare.",
+      "chart": "Primary care note, 11/05/2026. Synthetic patient GT, 67-year-old female. Started tirzepatide 03/10/2026 with self-pay single-dose vials; weight at start 99 kg, height 163.3 cm, BMI 37.1. Today weight 84 kg, BMI 31.5. Currently on 7.5 mg weekly, tolerating well. BP 124/76, no blood pressure medicine. A1c 5.3%. eGFR 80. No diabetes, sleep apnea, liver disease or cardiovascular events. Never received a GLP-1 through her Part D plan. Continues a structured nutrition and exercise program. Plan: continue tirzepatide for weight reduction; she can no longer afford self-pay and asks to use Medicare coverage.",
+      "prescription_as_drafted": "Zepbound 7.5 mg/0.5 mL single-dose vial, inject 7.5 mg subcutaneously once weekly. Dispense 4 vials (28 days).",
+      "answer_key": {
+        "route": "bridge",
+        "qualifying_basis": "BMI >=35 at GLP-1 initiation (37.1 on 03/10/2026)",
+        "part_d_indications_found": [],
+        "product_covered_on_route": "no",
+        "action": "fix_request",
+        "action_also_accepted": [],
+        "fix": "Change to Zepbound KwikPen 7.5 mg, then submit the Bridge PA using the BMI at initiation."
+      },
+      "what_it_tests": "Two traps: CMS uses BMI at GLP-1 initiation, not today's BMI, and the vial isn't covered.",
+      "rationale": "CMS: BMI and comorbidities must be met at GLP-1 initiation, including for patients who started before July 1, 2026. Her BMI at start was 37.1, so she qualifies even though today's 31.5 with no comorbidity wouldn't. The single-dose vial is not a covered product; the KwikPen is."
+    },
+    {
+      "id": "G8",
+      "group": "part_d",
+      "case_type": "trap",
+      "plan": "Medicare Advantage HMO with Part D (MA-PD).",
+      "chart": "Cardiology note, 11/03/2026. Synthetic patient HP, 70-year-old male. Myocardial infarction 2022; established coronary artery disease. Has received Wegovy 2.4 mg weekly through his Part D plan since 02/2026, prescribed to reduce cardiovascular risk. Weight at Wegovy start 101 kg, height 182 cm, BMI 30.5. A1c 5.7%. No sleep apnea, no liver disease. Patient wants to switch to tirzepatide for more weight loss. Plan: stop Wegovy; start Zepbound for weight reduction; send to the Medicare GLP-1 Bridge since this one is for weight.",
+      "prescription_as_drafted": "Zepbound KwikPen 2.5 mg, inject 2.5 mg subcutaneously once weekly. Dispense 1 pen (4 doses, 28 days).",
+      "answer_key": {
+        "route": "not_eligible",
+        "route_also_accepted": [
+          "part_d_plan"
+        ],
+        "qualifying_basis": "",
+        "part_d_indications_found": [
+          "already receiving a GLP-1 through Part D in 2026 (Wegovy for cardiovascular risk reduction)"
+        ],
+        "product_covered_on_route": "n/a",
+        "action": "do_not_submit",
+        "action_also_accepted": [
+          "send_to_part_d_plan"
+        ]
+      },
+      "what_it_tests": "Prior Part D GLP-1 use in 2026 excludes the patient, even for a different drug prescribed for weight.",
+      "rationale": "CMS excludes beneficiaries currently receiving a GLP-1 through Part D, or who received one through Part D in CY 2026, even for a different GLP-1 for weight management. He stays with his Part D plan."
+    },
+    {
+      "id": "G9",
+      "group": "part_d",
+      "case_type": "trap",
+      "plan": "Standalone Part D plan (PDP) with Original Medicare.",
+      "chart": "Hepatology and primary care note, 11/06/2026. Synthetic patient IR, 66-year-old female. Weight 92 kg, height 164.5 cm, BMI 34.0. Liver biopsy 07/2026: metabolic dysfunction-associated steatohepatitis (MASH), fibrosis stage F2, no cirrhosis. A1c 6.0% (prediabetes). BP 130/80. No diabetes, no sleep apnea, no cardiovascular events. Has never taken a GLP-1 medicine. In a structured nutrition and exercise program. Plan: start semaglutide for weight loss with diet and exercise.",
+      "prescription_as_drafted": "Wegovy 0.25 mg subcutaneously once weekly for 4 weeks, then titrate per label. Dispense 1 month supply.",
+      "answer_key": {
+        "route": "part_d_plan",
+        "qualifying_basis": "",
+        "part_d_indications_found": [
+          "noncirrhotic MASH with moderate fibrosis (F2)"
+        ],
+        "product_covered_on_route": "n/a",
+        "action": "send_to_part_d_plan",
+        "action_also_accepted": []
+      },
+      "what_it_tests": "A Part D-covered diagnosis overrides a weight-loss prescription that would otherwise qualify.",
+      "rationale": "She would meet BMI >=27 with prediabetes, and the prescription says weight loss, but noncirrhotic MASH with moderate to advanced fibrosis is a Part D-covered indication. Patients with it are ineligible for the Bridge even if they meet the BMI criteria."
+    },
+    {
+      "id": "G1b",
+      "group": "bridge",
+      "case_type": "variant",
+      "plan": "Standalone Part D plan (PDP) with Original Medicare.",
+      "chart": "Primary care note, 11/04/2026. Synthetic patient AL, 68-year-old female. Weight 98 kg, height 164 cm, BMI 36.4. Weight has been above 95 kg for 4 years. BP 128/78 on lisinopril 10 mg. A1c 5.4% (10/2026). No diagnosis of diabetes, sleep apnea or liver disease. No history of heart attack, stroke or peripheral artery disease. eGFR 81. Has never taken a GLP-1 medicine. Enrolled in the clinic's structured nutrition program since 08/2026 and walks 30 minutes 5 days a week. Plan: start tirzepatide for weight reduction alongside the nutrition and activity program.",
+      "prescription_as_drafted": "Zepbound KwikPen 2.5 mg, inject 2.5 mg subcutaneously once weekly. Dispense 1 pen (4 doses, 28 days). Dx: E66.812 (obesity, class 2). Note: SEND TO BRIDGE FOR WEIGHT MANAGEMENT.",
+      "answer_key": {
+        "route": "bridge",
+        "qualifying_basis": "BMI >=35 at initiation",
+        "part_d_indications_found": [],
+        "product_covered_on_route": "yes",
+        "action": "submit_bridge_pa",
+        "action_also_accepted": []
+      },
+      "what_it_tests": "G1 with the E66 code and the CMS routing note already on the prescription.",
+      "rationale": "BMI 36.4 meets the BMI >=35 tier alone. No Part D-covered indication. Zepbound KwikPen is a covered product. Weight reduction with lifestyle modification is documented."
+    }
+  ]
+}

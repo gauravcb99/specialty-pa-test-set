@@ -1,0 +1,15 @@
+Suite: Bridge set, all manual runs | model: ChatGPT GPT6 High | effort: app | docs as: attached | runs per case: 1 (G1, G8, G1b: 5) | seed: -
+
+case    route  action  product  key -> model actions
+G1      5/5     0/5        5/5  submit_bridge_pa -> fix_request x5
+G2      1/1     1/1        1/1  fix_request -> fix_request x1
+G3      1/1     0/1        1/1  submit_bridge_pa -> fix_request x1
+G4      1/1     1/1          -  send_to_part_d_plan -> send_to_part_d_plan x1
+G5      1/1     1/1        0/1  pend_for_info -> pend_for_info x1
+G6      1/1     1/1          -  do_not_submit -> do_not_submit x1
+G7      1/1     1/1        1/1  fix_request -> fix_request x1 | BMI at initiation 1/1
+G8      5/5     2/5          -  do_not_submit -> pend_for_info x3, send_to_part_d_plan x1, do_not_submit x1
+G9      1/1     1/1          -  send_to_part_d_plan -> send_to_part_d_plan x1
+G1b     5/5     5/5        5/5  submit_bridge_pa -> submit_bridge_pa x5
+
+All runs: route right 22/22, action matched key 13/22

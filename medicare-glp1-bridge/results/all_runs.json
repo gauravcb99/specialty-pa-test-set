@@ -1,0 +1,384 @@
+{
+ "G1": [
+  {
+   "route": "bridge",
+   "qualifying_basis": "Age 68 with BMI 36.4 at GLP-1 initiation, meeting the Bridge criterion of BMI >=35 without requiring an additional comorbidity. Tirzepatide is prescribed for weight reduction alongside structured nutrition and physical activity. Patient has a standalone Part D PDP, has never used a GLP-1, and has no documented Part D-covered indication.",
+   "bmi_used": 36.4,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "yes",
+   "missing_or_problems": [
+    "Prescription lacks an obesity diagnosis code from the E66 family. Add E66.812 (class 2 obesity).",
+    "Prescription lacks the required routing annotation: SEND TO BRIDGE FOR WEIGHT MANAGEMENT.",
+    "No prior denied pharmacy claim through the Medicare GLP-1 Bridge is documented. A denied Bridge claim must precede submission of the prior authorization.",
+    "Zepbound KwikPen is a covered Bridge formulation. The prescribed 2.5 mg once-weekly dose and one multidose pen containing four doses for 28 days do not require correction."
+   ],
+   "recommended_action": "fix_request"
+  },
+  {
+   "route": "bridge",
+   "qualifying_basis": "Patient is 68 years old, enrolled in a standalone Medicare Part D PDP, and initiating GLP-1 therapy for weight reduction with a BMI of 36.4. Meets the Medicare GLP-1 Bridge BMI >=35 criterion without requiring an additional qualifying comorbidity. Structured nutrition and physical activity are documented. No prior GLP-1 use or Part D-covered indication is documented.",
+   "bmi_used": 36.4,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "yes",
+   "missing_or_problems": [
+    "Prescription lacks an obesity diagnosis code from the E66 family. BMI 36.4 corresponds to the Class 2 obesity range (E66.812) on the CMS PA form.",
+    "Prescription lacks the required routing instruction: SEND TO BRIDGE FOR WEIGHT MANAGEMENT.",
+    "A pharmacy claim must first be submitted to the Medicare GLP-1 Bridge using BIN 028918 and PCN MEDDGLP1BR and receive a denial before the prescriber submits prior authorization.",
+    "The prescribed Zepbound KwikPen is a Bridge-covered formulation. The 2.5 mg once-weekly prescription for one pen containing four doses over 28 days does not require a product or quantity change based on the supplied CMS documents."
+   ],
+   "recommended_action": "fix_request"
+  },
+  {
+   "route": "bridge",
+   "qualifying_basis": "Age 68, standalone Medicare Part D PDP, and GLP-1 initiation BMI 36.4 (meets BMI >=35 criterion without additional comorbidity). Tirzepatide is prescribed for weight reduction alongside structured nutrition and physical activity. No Part D-covered indication is documented, and no prior GLP-1 use is reported.",
+   "bmi_used": 36.4,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "yes",
+   "missing_or_problems": [
+    "The prescription lacks an obesity diagnosis code from the E66 family. The prescriber should document the appropriate diagnosis; E66.812 corresponds to class 2 obesity (BMI 35\u201339.9) on the CMS form.",
+    "The prescription lacks the required instruction: SEND TO BRIDGE FOR WEIGHT MANAGEMENT.",
+    "The prescribed Zepbound KwikPen is a Bridge-covered formulation, and the 28-day supply meets the CMS fill-duration requirement.",
+    "A denied pharmacy claim submitted to the Bridge BIN 028918, PCN MEDDGLP1BR, is required before the prescriber submits prior authorization.",
+    "CMS must confirm beneficiary eligibility through Bridge claim processing."
+   ],
+   "recommended_action": "fix_request"
+  },
+  {
+   "route": "bridge",
+   "qualifying_basis": "Age 68, GLP-1 initiation BMI 36.4 (Class 2 obesity, E66.812), meeting the Bridge BMI >=35 criterion without requiring additional comorbidities. Tirzepatide is prescribed for weight reduction alongside structured nutrition and physical activity. Patient has eligible standalone Part D coverage, no prior GLP-1 use, and no documented Part D-covered indication.",
+   "bmi_used": 36.4,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "yes",
+   "missing_or_problems": [
+    "Zepbound KwikPen is a Bridge-covered product, and the drafted 28-day supply is consistent with the CMS fill-duration requirement.",
+    "Prescription lacks an obesity diagnosis code from the E66 family; add E66.812 (Class 2 obesity).",
+    "Prescription lacks the required annotation: SEND TO BRIDGE FOR WEIGHT MANAGEMENT.",
+    "A denied pharmacy claim submitted to Bridge BIN 028918, PCN MEDDGLP1BR, is required before the prescriber submits a Bridge prior authorization.",
+    "CMS must confirm beneficiary eligibility through the Bridge claims process."
+   ],
+   "recommended_action": "fix_request"
+  },
+  {
+   "route": "bridge",
+   "qualifying_basis": "Patient is 68 years old, enrolled in a standalone Medicare Part D PDP, and has never used a GLP-1 medication. Tirzepatide is prescribed for weight reduction alongside structured nutrition and physical activity. BMI at GLP-1 initiation is 36.4, meeting the CMS Bridge criterion of BMI >=35 without requiring an additional qualifying comorbidity. No Part D-covered indication is documented.",
+   "bmi_used": 36.4,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "yes",
+   "missing_or_problems": [
+    "The prescription lacks an obesity diagnosis code from the E66 family, required for Bridge claim routing.",
+    "The prescription lacks the required instruction 'SEND TO BRIDGE FOR WEIGHT MANAGEMENT' in the electronic prescription Note field or as an annotation.",
+    "The specified Zepbound KwikPen is a Bridge-covered formulation. The 2.5 mg weekly dose, one multidose pen containing four doses, and 28-day supply do not require correction under the supplied CMS documents.",
+    "A denied pharmacy claim submitted to the Bridge using BIN 028918 and PCN MEDDGLP1BR must precede submission of the prior authorization request.",
+    "The prescriber must wait for the pharmacy-generated prior authorization request before submitting the PA, following the CMS procedure."
+   ],
+   "recommended_action": "fix_request"
+  }
+ ],
+ "G2": [
+  {
+   "route": "bridge",
+   "qualifying_basis": "Patient is 70 years old, has MA-PD coverage, and is GLP-1 naive. Tirzepatide is prescribed for weight reduction with structured nutrition and physical activity. BMI at initiation is 35.7, meeting the Bridge criterion of BMI >=35 without requiring additional comorbidities. No Part D-covered indication is documented.",
+   "bmi_used": 35.7,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "no",
+   "missing_or_problems": [
+    "The prescribed Zepbound 2.5 mg/0.5 mL single-dose pen is explicitly excluded from Medicare GLP-1 Bridge coverage.",
+    "CMS covers Zepbound KwikPen, not Zepbound single-dose pens or vials. The prescription must be changed to the covered formulation with appropriate strength, directions, and dispensing details.",
+    "The prescription needs an obesity diagnosis code from the E66 family and the annotation 'SEND TO BRIDGE FOR WEIGHT MANAGEMENT'.",
+    "Before the prescriber submits a Bridge prior authorization, the pharmacy must submit a claim to Bridge BIN 028918, PCN MEDDGLP1BR, and receive a denial. The prescriber must then follow the CMS prior authorization workflow.",
+    "The chart does not provide all patient and prescriber identifiers required to complete the eventual prior authorization form."
+   ],
+   "recommended_action": "fix_request"
+  }
+ ],
+ "G3": [
+  {
+   "route": "bridge",
+   "qualifying_basis": "BMI 31.2 at GLP-1 initiation plus uncontrolled hypertension, as defined by CMS: BP 152/94 and 148/92 despite concurrent, adherent treatment with lisinopril 40 mg and amlodipine 10 mg daily. Patient is 66 years old, has a standalone Part D PDP, has never used a GLP-1, and is starting Wegovy for weight reduction alongside structured nutrition and physical activity. No Part D-covered indication is documented.",
+   "bmi_used": 31.2,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "yes",
+   "missing_or_problems": [
+    "The prescription lacks an E66-family obesity diagnosis code required for Bridge claim routing.",
+    "The prescription lacks the required instruction 'SEND TO BRIDGE FOR WEIGHT MANAGEMENT' in the prescription Note field.",
+    "Specify a 28-day initial supply rather than the nonspecific '1 month supply'; CMS permits only 28-day or 30-day fills.",
+    "Before a Bridge prior authorization can be submitted, the pharmacy must submit a claim to Bridge BIN 028918, PCN MEDDGLP1BR, and receive a denial indicating prior authorization is required.",
+    "The prescriber must await the pharmacy-generated prior authorization request before submitting the PA, following the CMS fallback procedure if no request arrives within 72 hours."
+   ],
+   "recommended_action": "fix_request"
+  }
+ ],
+ "G4": [
+  {
+   "route": "part_d_plan",
+   "qualifying_basis": "Documented moderate obstructive sleep apnea (OSA) with AHI 24 events/hour on polysomnography in March 2026, plus obesity (BMI 33.9). The prescription is intended for weight loss and OSA. CMS explicitly directs patients with moderate-to-severe OSA to their Part D plan, not the Medicare GLP-1 Bridge. The patient is therefore ineligible for the Bridge despite having a standalone PDP.",
+   "bmi_used": 33.9,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [
+    "Moderate obstructive sleep apnea (AHI 24 events/hour)"
+   ],
+   "product_covered_on_route": "n/a",
+   "missing_or_problems": [
+    "Moderate OSA excludes the patient from Medicare GLP-1 Bridge eligibility.",
+    "The patient's specific Part D formulary coverage and prior authorization requirements are not provided; actual plan coverage cannot be confirmed from the supplied CMS documents.",
+    "The prescribed Zepbound KwikPen is a formulation listed as covered under the Bridge, and the 28-day quantity is consistent with Bridge dispensing rules, but neither overrides the mandatory Part D routing for OSA.",
+    "Before submission, verify the patient's PDP coverage and applicable authorization requirements. Do not initiate a Bridge claim or Bridge prior authorization."
+   ],
+   "recommended_action": "send_to_part_d_plan"
+  }
+ ],
+ "G5": [
+  {
+   "route": "unclear",
+   "qualifying_basis": "The patient meets the Medicare GLP-1 Bridge clinical BMI/comorbidity threshold: age 72, BMI 28.6 at GLP-1 initiation, and previous myocardial infarction in April 2023. However, Bridge eligibility requires prescribing specifically to reduce excess body weight and maintain weight reduction, not for another approved indication. The chart does not explicitly establish the intended prescribing indication. Established cardiovascular disease also creates a potential Part D pathway for Wegovy if prescribed to reduce major adverse cardiovascular events.",
+   "bmi_used": 28.6,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [
+    "Potential cardiovascular risk-reduction indication for Wegovy: established cardiovascular disease, documented as CAD with previous myocardial infarction and coronary stent. Whether Wegovy is being prescribed to reduce major adverse cardiovascular events is not documented."
+   ],
+   "product_covered_on_route": "n/a",
+   "missing_or_problems": [
+    "The prescriber must clarify whether Wegovy is intended for weight reduction and maintenance or for reduction of major adverse cardiovascular events. The cardiology note documents both CAD and overweight but does not explicitly identify the treatment indication.",
+    "If prescribed for cardiovascular risk reduction, the CMS documents direct the request to the patient's Part D plan rather than the Bridge.",
+    "If prescribed exclusively for weight management, the patient meets the Bridge BMI and previous-MI clinical criteria, and Wegovy injection is a Bridge-covered product.",
+    "For Bridge routing, the prescription must include an E66-family diagnosis code and the instruction 'SEND TO BRIDGE FOR WEIGHT MANAGEMENT'. Neither appears on the drafted prescription.",
+    "Before submitting a Bridge prior authorization, the pharmacy must first submit a claim to the Bridge processor and receive a denial. No such claim or denial is documented.",
+    "Bridge covers only 28-day or 30-day fills. The four-week initial prescription should specify a 28-day supply rather than an ambiguous one-month supply."
+   ],
+   "recommended_action": "pend_for_info"
+  }
+ ],
+ "G6": [
+  {
+   "route": "not_eligible",
+   "qualifying_basis": "No qualifying Medicare GLP-1 Bridge basis. Initiation BMI is 32.0, below the standalone BMI threshold of 35. At BMI 30\u201334.9, the patient must have HFpEF, qualifying uncontrolled hypertension, or CKD stage 3a or above. Although blood pressure exceeds 140/90 mm Hg, the patient takes only one antihypertensive medication (lisinopril), not the two concurrent medications required by CMS. Increasing lisinopril to 40 mg does not satisfy the two-medication requirement. No other qualifying comorbidity is documented.",
+   "bmi_used": 32.0,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "n/a",
+   "missing_or_problems": [
+    "BMI 32.0 does not meet the standalone Bridge threshold of 35.",
+    "Elevated blood pressure does not satisfy the CMS definition of qualifying uncontrolled hypertension because the patient is receiving only one antihypertensive medication.",
+    "No documented HFpEF, CKD stage 3a or above, prediabetes, prior myocardial infarction, prior stroke, or symptomatic peripheral artery disease.",
+    "No documented Part D-covered indication: type 2 diabetes, moderate-to-severe obstructive sleep apnea, qualifying MASH, or cardiovascular risk reduction in established cardiovascular disease.",
+    "Structured nutrition is documented, but physical activity participation or a reason physical activity is clinically inappropriate is not documented.",
+    "Zepbound KwikPen is a Bridge-covered product, and the requested 28-day supply is permitted, but product eligibility does not establish patient eligibility."
+   ],
+   "recommended_action": "do_not_submit"
+  }
+ ],
+ "G7": [
+  {
+   "route": "bridge",
+   "qualifying_basis": "Patient has a standalone Medicare Part D PDP, is 67 years old, has never received a GLP-1 through Part D, and is using tirzepatide for weight reduction and maintenance with structured nutrition and exercise. BMI at GLP-1 initiation was 37.1, satisfying the Bridge criterion of BMI >=35 without requiring an additional comorbidity. No Part D-covered indication is documented. Clinical Bridge criteria are met, subject to CMS eligibility confirmation.",
+   "bmi_used": 37.1,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "no",
+   "missing_or_problems": [
+    "Zepbound single-dose vials are explicitly excluded from Bridge coverage. Only Zepbound KwikPen is covered.",
+    "The prescription must be changed to a Bridge-covered formulation with appropriate quantity and directions.",
+    "The prescription needs an obesity diagnosis code from the E66 family and the annotation 'SEND TO BRIDGE FOR WEIGHT MANAGEMENT'.",
+    "A denied pharmacy claim submitted to Bridge BIN 028918, PCN MEDDGLP1BR, is required before the prescriber submits a Bridge prior authorization.",
+    "The prescriber must complete the Bridge prior authorization after the required denied claim and pharmacy PA request. CMS must confirm beneficiary eligibility."
+   ],
+   "recommended_action": "fix_request"
+  }
+ ],
+ "G8": [
+  {
+   "route": "part_d_plan",
+   "qualifying_basis": "The patient is ineligible for the Medicare GLP-1 Bridge because he has received Wegovy through his Part D plan since 02/2026 for cardiovascular risk reduction. CMS directs patients with prior Part D GLP-1 receipt to their Part D plan. Although his initiation BMI of 30.5 and previous myocardial infarction satisfy a Bridge clinical criterion, prior Part D coverage excludes him from the Bridge.",
+   "bmi_used": 30.5,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [
+    "Reduction of major adverse cardiovascular events in adults with established cardiovascular disease: documented prior myocardial infarction (2022) and coronary artery disease, with Wegovy prescribed for cardiovascular risk reduction."
+   ],
+   "product_covered_on_route": "no",
+   "missing_or_problems": [
+    "Prior receipt of Wegovy through Part D makes the patient ineligible for the Bridge regardless of the new prescription's weight-management purpose.",
+    "Zepbound KwikPen is a Bridge-listed product, and the drafted quantity provides a 28-day supply, but product eligibility does not override the patient's Bridge exclusion.",
+    "The new Zepbound prescription is explicitly for weight reduction. No Part D-covered indication for Zepbound as prescribed is documented.",
+    "The documented cardiovascular indication supports the previous Wegovy treatment, not an assumption that Zepbound prescribed for weight reduction qualifies for Part D coverage.",
+    "Prescriber clarification is needed regarding the proposed switch and an appropriate Part D-covered treatment before submitting the new prescription."
+   ],
+   "recommended_action": "pend_for_info"
+  },
+  {
+   "route": "part_d_plan",
+   "qualifying_basis": "Not eligible for the Medicare GLP-1 Bridge because the patient has received Wegovy through Part D since 02/2026. CMS explicitly excludes patients who have previously received a GLP-1 through their Part D plan. The patient otherwise meets Bridge clinical criteria based on initiation BMI 30.5 and prior myocardial infarction, but this does not override the exclusion. Established cardiovascular disease with prior MI and prior Wegovy treatment for cardiovascular risk reduction support Part D routing.",
+   "bmi_used": 30.5,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [
+    "Established cardiovascular disease (coronary artery disease and myocardial infarction in 2022), with Wegovy previously prescribed to reduce cardiovascular risk and received through Part D."
+   ],
+   "product_covered_on_route": "n/a",
+   "missing_or_problems": [
+    "The prescriber's instruction to send Zepbound to the Bridge because it is for weight loss conflicts with CMS's explicit exclusion for patients who have previously received a GLP-1 through Part D.",
+    "Although Zepbound KwikPen is a Bridge-covered formulation, this patient is excluded from the Bridge.",
+    "The new Zepbound prescription is explicitly for weight reduction, not cardiovascular risk reduction. The prior Part D-covered cardiovascular indication for Wegovy does not establish a Part D-covered indication for Zepbound.",
+    "The supplied CMS documents do not establish Part D coverage for Zepbound for this requested use.",
+    "Before submission, the prescriber must reconcile the proposed switch with the documented Part D cardiovascular indication and confirm an appropriate medication and coverage pathway."
+   ],
+   "recommended_action": "pend_for_info"
+  },
+  {
+   "route": "part_d_plan",
+   "qualifying_basis": "CMS requires routing GLP-1 coverage requests to the patient's Part D plan when the patient has previously received a GLP-1 through Part D. This patient has received Wegovy through Part D since 02/2026 for cardiovascular risk reduction in established coronary artery disease following a 2022 myocardial infarction. Although the patient meets Bridge clinical criteria based on initiation BMI 30.5 and previous myocardial infarction, prior Part D GLP-1 receipt excludes Bridge eligibility.",
+   "bmi_used": 30.5,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [
+    "Reduction of major adverse cardiovascular events in adults with established cardiovascular disease, documented for the existing Wegovy treatment"
+   ],
+   "product_covered_on_route": "n/a",
+   "missing_or_problems": [
+    "Prior Wegovy receipt through Part D makes the patient ineligible for the Medicare GLP-1 Bridge, regardless of the new prescription's weight-management purpose.",
+    "The prescriber's instruction to route Zepbound to the Bridge is inconsistent with CMS eligibility and routing requirements.",
+    "Zepbound KwikPen is a listed Bridge product, and the 28-day quantity meets Bridge dispensing requirements, but neither overrides patient ineligibility.",
+    "The documented Part D cardiovascular indication applies to existing Wegovy therapy. The proposed Zepbound prescription is explicitly for weight reduction, and the supplied CMS documents do not establish Part D coverage for Zepbound for that purpose.",
+    "The prescriber should reconcile the medication switch and intended indication before submission. Do not submit a Bridge claim or prior authorization."
+   ],
+   "recommended_action": "send_to_part_d_plan"
+  },
+  {
+   "route": "part_d_plan",
+   "qualifying_basis": "The patient has established cardiovascular disease with a prior myocardial infarction and previously received Wegovy through Part D for cardiovascular risk reduction. CMS explicitly excludes patients who have already received a GLP-1 through Part D from the Medicare GLP-1 Bridge, regardless of the indication for the new prescription. BMI 30.5 and prior MI meet Bridge clinical criteria but do not override this exclusion.",
+   "bmi_used": 30.5,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [
+    "Reduction of major adverse cardiovascular events in adults with established cardiovascular disease, documented as the indication for prior Wegovy therapy"
+   ],
+   "product_covered_on_route": "no",
+   "missing_or_problems": [
+    "Prior Wegovy receipt through Part D since February 2026 makes the patient ineligible for the Medicare GLP-1 Bridge.",
+    "The documented Part D cardiovascular indication applies to the previous Wegovy treatment; the new Zepbound prescription is explicitly for weight reduction.",
+    "The supplied CMS documents do not establish Part D coverage for Zepbound prescribed solely for weight reduction.",
+    "Zepbound KwikPen is a Bridge-listed product and the 28-day quantity is consistent with Bridge fill limits, but neither overcomes the patient's Bridge exclusion.",
+    "Prescriber clarification or revision of the treatment plan is required before submitting the new prescription for coverage."
+   ],
+   "recommended_action": "pend_for_info"
+  },
+  {
+   "route": "not_eligible",
+   "qualifying_basis": "BMI 30.5 at initial GLP-1 therapy initiation plus prior myocardial infarction meets the Bridge clinical BMI/comorbidity criteria. However, the patient is excluded from the Bridge because he has already received Wegovy through his Part D plan since 02/2026.",
+   "bmi_used": 30.5,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [
+    "Established cardiovascular disease with prior myocardial infarction: Wegovy prescribed for cardiovascular risk reduction and covered through Part D."
+   ],
+   "product_covered_on_route": "n/a",
+   "missing_or_problems": [
+    "Prior receipt of Wegovy through Part D is an explicit Medicare GLP-1 Bridge exclusion, regardless of the new weight-management indication.",
+    "The requested Zepbound is prescribed solely for weight reduction; no Part D-covered indication for this Zepbound prescription is documented.",
+    "The established cardiovascular indication supporting Part D coverage of Wegovy does not establish Part D coverage for Zepbound.",
+    "Zepbound KwikPen is a Bridge-listed formulation, and the requested 28-day supply meets the Bridge supply-duration requirement; neither overrides the patient's Bridge exclusion.",
+    "The prescriber must reassess the proposed switch and coverage pathway before submission. CMS directs GLP-1 coverage requests for patients previously receiving GLP-1 therapy through Part D to their Part D plan."
+   ],
+   "recommended_action": "do_not_submit"
+  }
+ ],
+ "G9": [
+  {
+   "route": "part_d_plan",
+   "qualifying_basis": "Biopsy-confirmed noncirrhotic MASH with F2 fibrosis (moderate liver scarring), a Part D-eligible diagnosis under the CMS Bridge documents. Although BMI 34.0 with prediabetes meets Bridge clinical BMI/comorbidity criteria, the MASH diagnosis directs GLP-1 coverage requests to the patient's Part D plan.",
+   "bmi_used": 34.0,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [
+    "Noncirrhotic MASH with moderate fibrosis (F2)"
+   ],
+   "product_covered_on_route": "n/a",
+   "missing_or_problems": [
+    "The prescription is explicitly for weight loss; treatment of MASH is not documented as the prescribing indication. Clarify the intended indication with the prescriber before submitting a Part D coverage request.",
+    "The attached CMS documents do not establish Wegovy coverage or prior authorization requirements under this patient's specific PDP.",
+    "Do not submit a Medicare GLP-1 Bridge claim or prior authorization because the patient has a Part D-eligible MASH diagnosis."
+   ],
+   "recommended_action": "send_to_part_d_plan"
+  }
+ ],
+ "G1b": [
+  {
+   "route": "bridge",
+   "qualifying_basis": "Patient is 68 years old with an initiation BMI of 36.4, meeting the Medicare GLP-1 Bridge criterion of BMI >=35 without requiring an additional qualifying comorbidity. Tirzepatide is prescribed for weight reduction alongside structured nutrition and physical activity. The patient has eligible standalone Part D coverage, has never used a GLP-1 medication, and has no documented Part D-covered GLP-1 indication.",
+   "bmi_used": 36.4,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "yes",
+   "missing_or_problems": [
+    "No denied pharmacy claim to the Medicare GLP-1 Bridge is documented. CMS requires a denied claim submitted to Bridge BIN 028918, PCN MEDDGLP1BR, before the prescriber submits a prior authorization.",
+    "The prescription should first be transmitted to the pharmacy with diagnosis E66.812 and the instruction SEND TO BRIDGE FOR WEIGHT MANAGEMENT. Both are already present in the drafted prescription.",
+    "The pharmacy must submit the claim to the Bridge processor and obtain the required denial. The prescriber must then wait for the pharmacy-initiated prior authorization request. If no request arrives within 72 hours, CMS permits use of its downloadable fax form.",
+    "The prescriber must complete all required prior authorization fields and provide the required attestation and signature. Patient and prescriber identifiers needed for the form are not supplied in the chart.",
+    "No prescription correction is indicated by the supplied CMS documents. Zepbound KwikPen is a covered Bridge product, the obesity diagnosis code is appropriate for BMI 35\u201339.9, and the prescribed 28-day supply is within the permitted fill duration."
+   ],
+   "recommended_action": "submit_bridge_pa"
+  },
+  {
+   "route": "bridge",
+   "qualifying_basis": "Patient is 68 years old, enrolled in a standalone Part D PDP, and initiating GLP-1 therapy for weight reduction. Initiation BMI is 36.4, meeting the Medicare GLP-1 Bridge criterion of BMI >=35 without requiring an additional qualifying comorbidity. Treatment is combined with structured nutrition and regular physical activity. Patient has never used a GLP-1 medication. No Part D-covered indication is documented.",
+   "bmi_used": 36.4,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "yes",
+   "missing_or_problems": [
+    "No prior denied Medicare GLP-1 Bridge pharmacy claim is documented. A denied claim using BIN 028918 and PCN MEDDGLP1BR is mandatory before the prescriber submits a prior authorization.",
+    "The pharmacy must first process the prescription through the Bridge and obtain the required denial and PA instructions.",
+    "The prescriber must wait for the pharmacy-generated PA request, typically received within 24\u201372 hours. If no request arrives within 72 hours, the CMS fax form may be used.",
+    "The PA form must be completed truthfully and in full by the prescribing clinician.",
+    "No prescription correction is indicated by the supplied CMS documents: Zepbound KwikPen is a covered formulation, the E66.812 diagnosis code and Bridge routing note are appropriate, and the 28-day supply meets Bridge requirements."
+   ],
+   "recommended_action": "submit_bridge_pa"
+  },
+  {
+   "route": "bridge",
+   "qualifying_basis": "Patient is 68 years old, enrolled in a standalone Medicare Part D PDP, and has never used a GLP-1 medication. Tirzepatide is prescribed exclusively for weight reduction alongside structured nutrition and physical activity. BMI at GLP-1 initiation is 36.4, meeting the Medicare GLP-1 Bridge criterion of BMI >= 35 without requiring an additional qualifying comorbidity. No Part D-covered indication is documented.",
+   "bmi_used": 36.4,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "yes",
+   "missing_or_problems": [
+    "No denied pharmacy claim to the Medicare GLP-1 Bridge is documented. CMS requires a denied Bridge pharmacy claim before the prescriber submits prior authorization.",
+    "Prescriber Preclusion List status is not documented and must be verified.",
+    "No prescription correction is needed. Zepbound KwikPen is a covered Bridge formulation; 2.5 mg once weekly, one four-dose pen for 28 days, obesity diagnosis E66.812, and the Bridge routing note are consistent with the CMS documents.",
+    "Final Bridge eligibility remains subject to CMS confirmation."
+   ],
+   "recommended_action": "submit_bridge_pa"
+  },
+  {
+   "route": "bridge",
+   "qualifying_basis": "Patient has Original Medicare with a standalone Part D PDP, is 68 years old, and is starting GLP-1 therapy specifically for weight reduction. BMI at initiation is 36.4, meeting the Medicare GLP-1 Bridge criterion of BMI >=35 without requiring additional comorbidities. Structured nutrition and physical activity are documented. Patient has never used a GLP-1 medication and has no documented Part D-covered GLP-1 indication.",
+   "bmi_used": 36.4,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "yes",
+   "missing_or_problems": [
+    "No prescription correction is needed. Zepbound KwikPen is a Bridge-covered product; the 2.5 mg weekly dose, one multidose pen containing four doses, 28-day supply, E66.812 diagnosis code, and SEND TO BRIDGE FOR WEIGHT MANAGEMENT note are appropriate.",
+    "A denied pharmacy claim through the Medicare GLP-1 Bridge is not documented. The pharmacy must first submit the claim using BIN 028918 and PCN MEDDGLP1BR before the prescriber submits a prior authorization.",
+    "CMS must confirm beneficiary eligibility during Bridge claim processing.",
+    "The prescriber must wait for the pharmacy-generated prior authorization request and complete the required fields truthfully before submitting the PA. If no request arrives within 72 hours, the prescriber may use the CMS fax form."
+   ],
+   "recommended_action": "submit_bridge_pa"
+  },
+  {
+   "route": "bridge",
+   "qualifying_basis": "Age 68 with standalone Medicare Part D coverage; initiating GLP-1 therapy for weight reduction with BMI 36.4 (at least 35), which independently meets the CMS Bridge clinical BMI criterion. Treatment is combined with structured nutrition and regular physical activity. No Part D-covered GLP-1 indication is documented, and the patient has never taken a GLP-1 medication.",
+   "bmi_used": 36.4,
+   "bmi_timepoint": "initiation",
+   "part_d_indications_found": [],
+   "product_covered_on_route": "yes",
+   "missing_or_problems": [
+    "No denied pharmacy claim through the Medicare GLP-1 Bridge is documented. A claim must first be submitted to Bridge BIN 028918, PCN MEDDGLP1BR, and denied before the prescriber submits a prior authorization.",
+    "Prediabetes status is not explicitly documented for PA question Q6; A1c 5.4% alone does not establish the absence of prediabetes by all diagnostic criteria.",
+    "Heart failure with preserved ejection fraction status is not documented for PA question Q10. Clarify before completing the PA rather than assuming No.",
+    "The prescribed Zepbound KwikPen is a covered Bridge formulation, the E66.812 diagnosis and routing note are appropriate, and the 28-day quantity is permitted. No prescription correction is identified."
+   ],
+   "recommended_action": "submit_bridge_pa"
+  }
+ ]
+}
